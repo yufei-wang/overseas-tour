@@ -1,0 +1,1310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>海外调研日程</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+/* Layout: one ledger column — open sign-ups as tickets on top, a month-by-month itinerary in the middle, the archive folded below. */
+:root{
+  --bg:#ffffff; --surface:#ffffff; --surface-2:#f2f5f9; --ink:#162236; --muted:#5d6b80; --line:#dde3ec;
+  --brand:#14284b; --brand-ink:#eef3fa; --brand-muted:#a9b8d0; --brand-line:#2b4370;
+  --accent:#1d3f78; --accent-ink:#ffffff; --accent-soft:#e7eef9;
+  --amber:#8f611a; --amber-soft:#f6ecd9; --warn:#b03f28; --warn-soft:#f9e5df;
+  --past:#8a94a3; --past-soft:#eef1f5;
+  --single:#12805c; --single-soft:#e2f3ec; --single-ink:#0c6346; --single-on:#ffffff;
+  --multi:#5b4bc9; --multi-soft:#ece9fb; --multi-ink:#4434a8; --multi-on:#ffffff;
+  --star:#d29b1c;
+  --shadow:0 1px 2px rgb(20 35 70 / .05), 0 8px 24px rgb(20 35 70 / .07);
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Cascadia Mono",Menlo,Consolas,"Roboto Mono",monospace;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1520; --surface:#161e2b; --surface-2:#1d2736; --ink:#e4e9f1; --muted:#9aa7ba; --line:#28344a;
+  --brand:#0c1a33; --brand-ink:#e6edf8; --brand-muted:#8fa2c2; --brand-line:#22385f;
+  --accent:#86aaea; --accent-ink:#0b1730; --accent-soft:#1a2b4a;
+  --amber:#dcb06a; --amber-soft:#382d1b; --warn:#ee8d73; --warn-soft:#40231b;
+  --past:#76829a; --past-soft:#1d2533;
+  --single:#1f9e76; --single-soft:#14352b; --single-ink:#84d9b9; --single-on:#06150f;
+  --multi:#8678e6; --multi-soft:#272350; --multi-ink:#c3bcf7; --multi-on:#120f2e;
+  --star:#e6bb52;
+  --shadow:0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1520; --surface:#161e2b; --surface-2:#1d2736; --ink:#e4e9f1; --muted:#9aa7ba; --line:#28344a;
+  --brand:#0c1a33; --brand-ink:#e6edf8; --brand-muted:#8fa2c2; --brand-line:#22385f;
+  --accent:#86aaea; --accent-ink:#0b1730; --accent-soft:#1a2b4a;
+  --amber:#dcb06a; --amber-soft:#382d1b; --warn:#ee8d73; --warn-soft:#40231b;
+  --past:#76829a; --past-soft:#1d2533;
+  --single:#1f9e76; --single-soft:#14352b; --single-ink:#84d9b9; --single-on:#06150f;
+  --multi:#8678e6; --multi-soft:#272350; --multi-ink:#c3bcf7; --multi-on:#120f2e;
+  --star:#e6bb52;
+  --shadow:0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 var(--sans)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- masthead ---------- */
+.mast{background:var(--brand);color:var(--brand-ink)}
+.mast-in{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;padding-block:34px 28px}
+.mast h1{font-size:30px;font-weight:650;letter-spacing:.06em;line-height:1.25}
+.mast-meta{margin:10px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--brand-muted)}
+.mast-meta a{color:var(--brand-ink);text-decoration:none;border-bottom:1px solid var(--brand-line)}
+.mast-meta a:hover{border-color:var(--brand-ink)}
+.mast-meta b{font-family:var(--mono);font-weight:600;margin-left:4px}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink);border-radius:999px;padding:0 14px;height:40px;width:min(340px,100%);border:1px solid var(--line)}
+.mast .search{border-color:transparent}
+.search svg{flex:none;width:16px;height:16px;color:var(--muted)}
+.search input{border:0;background:transparent;outline:0;flex:1;min-width:0;height:100%}
+.search input::placeholder{color:var(--muted)}
+
+/* ---------- sections ---------- */
+main.wrap{padding-block:8px 40px}
+.sec{padding-top:34px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:16px}
+.sec-head h2{font-size:19px;font-weight:650;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.count{font:600 12px/1 var(--mono);padding:5px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted)}
+.sec-open .count{background:var(--accent);color:var(--accent-ink)}
+.empty{padding:26px 20px;border:1px dashed var(--line);border-radius:var(--r);color:var(--muted);text-align:center;background:var(--surface)}
+
+.seg{display:inline-flex;padding:3px;border-radius:9px;background:var(--surface-2);border:1px solid var(--line);gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:5px 12px;border-radius:7px;font-size:13px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgb(0 0 0 / .08);font-weight:600}
+
+/* ---------- tickets (open now) ---------- */
+.tickets{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.ticket{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s ease,border-color .15s ease;min-width:0}
+.ticket:hover{transform:translateY(-2px);border-color:var(--accent)}
+.ticket:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.t-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px 10px;font-size:12.5px}
+.t-org{font-weight:650;color:var(--accent);letter-spacing:.04em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.due{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.due.soon{color:var(--warn);font-weight:600}
+.perf{position:relative;height:0;border-top:1.5px dashed var(--line);margin:0 12px}
+.perf::before,.perf::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.perf::before{left:-21px;clip-path:inset(0 0 0 50%)}
+.perf::after{right:-21px;clip-path:inset(0 50% 0 0)}
+.t-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.t-body h3{font-size:16px;font-weight:650;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.t-when{font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.t-when .arrow{color:var(--muted)}
+.t-when small{font-family:var(--sans);color:var(--muted);font-size:12px}
+.t-loc{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:flex-start}
+.t-loc svg{flex:none;width:14px;height:14px;margin-top:3px}
+.t-comp{margin:0;font-size:13px;line-height:1.55;color:var(--ink);opacity:.85;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.t-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:6px;font-size:12.5px;color:var(--muted)}
+.t-foot .more{color:var(--accent);font-weight:600}
+
+/* ---------- list rows (upcoming / past) ---------- */
+.months{display:flex;flex-direction:column;gap:22px}
+.month{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px}
+.month-label{padding-top:12px}
+.month-label b{display:block;font-size:22px;font-weight:650;line-height:1.1;font-variant-numeric:tabular-nums}
+.month-label span{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.rows{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-width:0}
+.row{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:128px minmax(0,1fr) auto;gap:4px 16px;align-items:center;width:100%;padding:12px 16px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row:hover{background:var(--surface-2)}
+.row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.r-date{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.r-date small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.r-date.tbd{color:var(--amber);font-family:var(--sans)}
+.r-main{min-width:0}
+.r-main b{display:block;font-weight:600;font-size:14.5px;line-height:1.45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r-main small{display:block;color:var(--muted);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r-tags{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.past .rows .row b{font-weight:500}
+.past .r-date{color:var(--muted)}
+
+.pill{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;line-height:1.6}
+.pill.open{background:var(--accent);color:var(--accent-ink)}
+.pill.soon{background:var(--amber-soft);color:var(--amber)}
+.pill.closed{background:var(--surface-2);color:var(--muted)}
+.pill.past{background:var(--past-soft);color:var(--past)}
+.pill.live{background:var(--warn-soft);color:var(--warn)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.ind{display:inline-flex;align-items:center;padding:0 7px;border-radius:5px;font-size:11.5px;font-weight:600;line-height:1.75;white-space:nowrap;letter-spacing:.02em}
+.ind.single{background:var(--single-soft);color:var(--single-ink)}
+.ind.multi{background:var(--multi-soft);color:var(--multi-ink)}
+.stars{color:var(--star);font-size:12px;letter-spacing:1px;white-space:nowrap;font-weight:400}
+.stars i{font-style:normal;color:var(--line)}
+.t-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-top:20px}
+.filters .lbl{font-size:12.5px;color:var(--muted);font-weight:600}
+.filters .sep{width:1px;height:20px;background:var(--line)}
+.chip-btn .dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:0}
+.star-pick{display:inline-flex;gap:1px}
+.star-pick button{border:0;background:transparent;font-size:16px;line-height:1;padding:2px 1px;color:var(--line)}
+.star-pick button.on{color:var(--star)}
+.star-pick button:hover{color:var(--star)}
+.ind-sel{border:1px solid var(--line);border-radius:7px;padding:4px 6px;background:var(--surface);font-size:13px}
+.chip-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted)}
+.chip-btn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);font-weight:600}
+.year-h{font:600 13px/1 var(--mono);color:var(--muted);margin:18px 0 8px;letter-spacing:.05em}
+.year-h:first-child{margin-top:0}
+.show-all{margin-top:12px;border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:8px 14px;width:100%;color:var(--accent);font-weight:600}
+
+/* ---------- calendar ---------- */
+.cal{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.cal-nav h3{font-size:16px;font-weight:650;font-variant-numeric:tabular-nums}
+.cal-nav .btns{display:flex;gap:6px}
+.icon-btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;min-width:34px;height:32px;display:inline-grid;place-items:center;color:var(--ink);padding:0 10px;font-size:13px}
+.icon-btn:hover{background:var(--surface-2)}
+.cal-head{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));font-size:12px;color:var(--muted);text-align:center;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.cal-head span{padding:6px 0}
+.cal-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));min-height:88px;border-bottom:1px solid var(--line)}
+.cal-week:last-child{border-bottom:0}
+.cal-day{border-left:1px solid var(--line);padding:4px 6px;font:12px/1.4 var(--mono);color:var(--muted)}
+.cal-day:first-child{border-left:0}
+.cal-day.out{background:var(--surface-2);color:var(--past)}
+.cal-day.today span{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:999px;background:var(--warn);color:#fff;font-weight:700}
+.cal-bar{all:unset;box-sizing:border-box;cursor:pointer;position:relative;z-index:1;margin:1px 3px;height:22px;padding:0 7px;border-radius:5px;font-size:12px;line-height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;align-self:start;min-width:0}
+.cal-bar.ind-single{background:var(--single-soft);color:var(--ink);box-shadow:inset 3px 0 0 var(--single)}
+.cal-bar.ind-multi{background:var(--multi-soft);color:var(--ink);box-shadow:inset 3px 0 0 var(--multi)}
+.cal-bar.is-open.ind-single{background:var(--single);color:var(--single-on);font-weight:600}
+.cal-bar.is-open.ind-multi{background:var(--multi);color:var(--multi-on);font-weight:600}
+.cal-bar.is-past{opacity:.5}
+.cal-bar.cl{border-top-left-radius:0;border-bottom-left-radius:0;margin-left:0;box-shadow:none}
+.cal-bar.cr{border-top-right-radius:0;border-bottom-right-radius:0;margin-right:0}
+.cal-bar:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.cal-legend{display:flex;flex-wrap:wrap;gap:6px 16px;padding:10px 12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.cal-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-2px}
+.cal-tbd{margin-top:14px}
+.cal-tbd h4{margin:0 0 8px;font-size:13px;color:var(--muted);font-weight:600}
+
+/* ---------- footer ---------- */
+.foot{padding-block:28px 40px;border-top:1px solid var(--line);margin-top:40px;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.foot a{color:var(--muted)}
+
+/* ---------- detail sheet ---------- */
+.sheet{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.sheet-backdrop{position:absolute;inset:0;background:rgb(10 18 35 / .5)}
+.sheet-panel{position:relative;background:var(--surface);color:var(--ink);border-radius:16px;width:min(680px,100%);max-height:100%;overflow:auto;box-shadow:0 24px 60px rgb(0 0 0 / .3);padding:26px 28px 24px}
+.sheet-x{position:absolute;top:14px;right:14px;font-size:18px}
+.d-top{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:13px;padding-right:44px}
+.d-org{font-weight:650;color:var(--accent);letter-spacing:.04em}
+.d-id{color:var(--muted);font-size:12px}
+.sheet-panel h2{font-size:21px;font-weight:650;line-height:1.4;margin:10px 0 18px}
+.kv{margin:0;border-top:1px solid var(--line)}
+.kv>div{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.kv dt{font-size:12.5px;color:var(--muted);letter-spacing:.08em;padding-top:2px}
+.kv dd{margin:0;line-height:1.7;overflow-wrap:anywhere;min-width:0}
+.kv dd small{display:block;color:var(--muted);font-size:12.5px}
+.kv .tbd{color:var(--amber)}
+.kv .lines{white-space:pre-line;font-variant-numeric:tabular-nums}
+.kv .notice{color:var(--warn);font-weight:600}
+.kv .d-files{margin-top:2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 20px}
+.facts div{background:var(--surface);padding:10px 14px;min-width:0}
+.facts dt{font-size:12px;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-weight:600;overflow-wrap:anywhere}
+.facts dd small{display:block;font-weight:400;color:var(--muted)}
+.d-sec{margin-top:18px}
+.d-sec h3{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.06em;margin-bottom:6px}
+.d-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.75;max-width:65ch}
+.d-files{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.d-files a,.d-files span.file{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
+.d-files a:hover{border-color:var(--accent)}
+.d-files img{display:block;max-width:100%;border-radius:8px;border:1px solid var(--line)}
+.d-upd{margin-top:22px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* ---------- buttons, forms ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:36px;padding:0 14px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--surface-2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.danger{color:var(--warn);border-color:var(--warn-soft)}
+.btn.danger.armed{background:var(--warn);color:#fff;border-color:var(--warn)}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn.sm{height:30px;padding:0 10px;font-size:12.5px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field label,.field .lbl{font-size:12.5px;color:var(--muted);font-weight:600}
+.field input,.field textarea,.field select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 10px;min-width:0;width:100%}
+.field textarea{resize:vertical;line-height:1.6}
+.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.field .hint{font-size:12px;color:var(--muted)}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form-grid .full{grid-column:1 / -1}
+.radio-row{display:flex;flex-wrap:wrap;gap:6px}
+.radio-row label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;color:var(--ink);font-weight:500}
+.radio-row input{accent-color:var(--accent);margin:0}
+.radio-row label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.form-err{color:var(--warn);font-size:13px;margin:0;min-height:1em}
+
+/* ---------- admin ---------- */
+.adm-bar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:var(--brand);color:var(--brand-ink)}
+body.admin::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:21;background:var(--brand)}
+.adm-bar-in{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-block:10px}
+.adm-title{display:flex;align-items:center;gap:10px;margin-right:auto}
+.adm-title b{font-size:16px;letter-spacing:.06em}
+.mode-chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--brand-line);color:var(--brand-ink);white-space:nowrap;max-width:46vw;overflow:hidden;text-overflow:ellipsis}
+.tabs{display:flex;gap:4px}
+.tabs button{border:0;background:transparent;color:var(--brand-muted);padding:7px 12px;border-radius:8px;font-weight:600}
+.tabs button[aria-selected="true"]{background:var(--brand-line);color:var(--brand-ink)}
+.adm-actions{display:flex;align-items:center;gap:8px}
+.adm-actions .btn.ghost{background:transparent;color:var(--brand-ink);border-color:var(--brand-line)}
+.dirty{font-size:12px;color:var(--brand-muted);white-space:nowrap}
+.dirty.on{color:#f3c879}
+.adm-body{padding-block:22px 60px}
+.adm-bar .wrap,.adm-body.wrap{max-width:1480px}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.toolbar .search{height:36px;width:min(260px,100%)}
+.toolbar .grow{flex:1}
+.depts{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px;font-size:13px}
+.depts .lbl{color:var(--muted);font-weight:600;margin-right:4px}
+.dept-chip{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:2px 4px 2px 12px}
+.dept-chip input{border:0;background:transparent;width:6em;padding:2px 0;outline:0}
+.dept-chip input:focus{border-bottom:1px solid var(--accent)}
+.dept-chip button{border:0;background:transparent;color:var(--muted);width:24px;height:24px;border-radius:999px}
+.dept-chip button:hover{background:var(--surface-2);color:var(--warn)}
+.dept-chip.armed{border-color:var(--warn)}
+.dept-chip.armed button{color:var(--warn)}
+.alert{border:1px solid var(--amber-soft);background:var(--amber-soft);color:var(--ink);border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:13px}
+.alert b{color:var(--amber)}
+.alert ul{margin:6px 0 0;padding-left:18px}
+.table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+table.grid{border-collapse:separate;border-spacing:0;width:100%;font-size:13px}
+table.grid th,table.grid td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;background:var(--surface)}
+table.grid thead th{position:sticky;top:0;z-index:2;background:var(--surface-2);font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+table.grid tbody tr:last-child>*{border-bottom:0}
+table.grid tfoot td,table.grid tfoot th{background:var(--surface-2);font-weight:600;border-top:1px solid var(--line);border-bottom:0}
+table.grid .stick{position:sticky;left:0;z-index:1;border-right:1px solid var(--line)}
+table.grid thead .stick{z-index:3}
+.ev-cell{min-width:220px;max-width:300px}
+.ev-cell b{display:block;font-weight:600;line-height:1.45}
+.ev-cell small{display:flex;flex-wrap:wrap;gap:2px 8px;color:var(--muted);font-size:12px;margin-top:2px;align-items:center}
+.ev-cell .pill{font-size:11px;padding:0 7px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.num b{font-family:var(--mono)}
+.in-num{width:64px;text-align:right;border:1px solid var(--line);border-radius:7px;padding:5px 6px;background:var(--surface)}
+.names-cell{display:flex;align-items:flex-start;gap:6px;min-width:136px}
+.names-cell textarea{flex:1;min-width:0;border:1px solid transparent;border-radius:7px;padding:5px 7px;background:var(--surface-2);resize:none;line-height:1.5;min-height:31px;field-sizing:content}
+.names-cell textarea:hover{border-color:var(--line)}
+.names-cell textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;background:var(--surface)}
+.cnt{font:600 12px/31px var(--mono);color:var(--muted);min-width:14px;text-align:right}
+.cnt.has{color:var(--accent)}
+tr.over td,tr.over th{background:var(--warn-soft)}
+.rem.neg{color:var(--warn);font-weight:700}
+.note-in{width:100%;min-width:240px;max-height:7.6em;overflow:auto;border:1px solid transparent;border-radius:7px;padding:5px 7px;background:transparent;resize:none;font-size:12.5px;line-height:1.5;color:var(--muted);field-sizing:content;min-height:31px}
+.note-in:hover{border-color:var(--line)}
+.note-in:focus{outline:2px solid var(--accent);outline-offset:-1px;color:var(--ink);background:var(--surface)}
+.st-sel{border:1px solid var(--line);border-radius:7px;padding:4px 6px;background:var(--surface);font-size:13px}
+.row-actions{display:flex;gap:6px;justify-content:flex-end}
+.connect{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;padding-block:24px 60px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.card h2{font-size:17px;font-weight:650}
+.card p{margin:0}
+.card details{font-size:13px;color:var(--muted)}
+.card details summary{cursor:pointer;color:var(--accent);font-weight:600}
+.card ol{padding-left:18px;margin:8px 0 0;display:flex;flex-direction:column;gap:4px}
+.adm-intro{padding-block:26px 0}
+.adm-intro h1{font-size:24px;font-weight:650;letter-spacing:.05em}
+.adm-intro p{margin:6px 0 0;color:var(--muted)}
+
+/* drawer editor */
+.drawer{position:fixed;inset:0;z-index:60;display:flex;justify-content:flex-end}
+.drawer-panel{position:relative;background:var(--bg);width:min(640px,100%);height:100%;overflow:auto;box-shadow:-20px 0 50px rgb(0 0 0 / .25);display:flex;flex-direction:column}
+.drawer-head{position:sticky;top:0;z-index:2;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:max(14px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) 14px 20px}
+.drawer-head h2{font-size:17px;font-weight:650}
+.drawer-body{padding:20px max(20px, env(safe-area-inset-right, 0px)) 20px 20px;display:flex;flex-direction:column;gap:16px}
+.drawer-foot{position:sticky;bottom:0;background:var(--surface);border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;padding:12px max(20px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) 20px;margin-top:auto}
+.drawer-foot .left{margin-right:auto}
+.fieldset{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:12px}
+.fieldset legend,.fs-title{font-size:13px;font-weight:650;color:var(--ink)}
+.att-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.att-list li{display:flex;align-items:center;gap:8px;justify-content:space-between;border:1px solid var(--line);border-radius:8px;padding:6px 6px 6px 10px;font-size:13px;overflow-wrap:anywhere}
+.check{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);cursor:pointer}
+.check input{accent-color:var(--accent)}
+
+.toast{position:fixed;left:50%;bottom:max(20px, calc(env(safe-area-inset-bottom, 0px) + 12px));transform:translateX(-50%);z-index:90;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:13.5px;box-shadow:var(--shadow);max-width:calc(100% - 32px)}
+
+@media (max-width:720px){
+  .mast-in{padding-block:24px 20px}
+  .mast h1{font-size:24px}
+  .month{grid-template-columns:minmax(0,1fr);gap:8px}
+  .month-label{padding-top:0;display:flex;align-items:baseline;gap:8px}
+  .month-label b{display:inline;font-size:17px}
+  .row{grid-template-columns:minmax(0,1fr) auto;padding:11px 14px}
+  .row .r-date{grid-column:1 / -1}
+  .r-date small{display:inline;margin-left:8px}
+  .r-main b{white-space:normal}
+  .tickets{grid-template-columns:minmax(0,1fr)}
+  .cal-week{min-height:70px}
+  .cal-day{padding:3px 4px;font-size:11px}
+  .cal-bar{font-size:11px;padding:0 4px;margin:1px 1px}
+  .sheet{align-items:flex-end;padding:0}
+  .sheet-panel{border-radius:16px 16px 0 0;max-height:92%;padding:22px max(18px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px))}
+  .connect{grid-template-columns:minmax(0,1fr)}
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .mode-chip{max-width:40vw}
+  .adm-bar{position:static}
+  .ev-cell{min-width:150px;max-width:170px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<div id="public">
+  <header class="mast">
+    <div class="wrap mast-in">
+      <div>
+        <h1>海外调研日程</h1>
+        <p class="mast-meta" id="mastMeta">正在加载…</p>
+      </div>
+      <label class="search" for="q">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
+        <span class="sr">搜索</span>
+        <input id="q" type="search" placeholder="搜索活动、券商、公司或地点" autocomplete="off">
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <div class="filters" id="filters" role="group" aria-label="筛选"></div>
+    <section class="sec sec-open" id="open" aria-labelledby="h-open">
+      <div class="sec-head"><h2 id="h-open">正在报名 <span class="count" id="c-open">0</span></h2></div>
+      <div id="openList"></div>
+    </section>
+
+    <section class="sec" id="upcoming" aria-labelledby="h-up">
+      <div class="sec-head">
+        <h2 id="h-up">即将进行 <span class="count" id="c-up">0</span></h2>
+        <div class="seg" role="group" aria-label="显示方式">
+          <button type="button" data-view="list" aria-pressed="true">列表</button>
+          <button type="button" data-view="cal" aria-pressed="false">月历</button>
+        </div>
+      </div>
+      <div id="upList"></div>
+    </section>
+
+    <section class="sec past" id="past" aria-labelledby="h-past">
+      <div class="sec-head">
+        <h2 id="h-past">往期调研 <span class="count" id="c-past">0</span></h2>
+        <div class="chips" id="yearChips"></div>
+      </div>
+      <div id="pastList"></div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="foot"><span id="footNote"></span><a href="#admin">管理</a></div>
+  </footer>
+</div>
+
+<div id="admin" hidden></div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button type="button" class="icon-btn sheet-x" data-close aria-label="关闭">✕</button>
+    <div id="sheetBody"></div>
+  </div>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="sheet-backdrop" data-dclose></div>
+  <form class="drawer-panel" id="evForm" novalidate></form>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ================= helpers ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad = n => String(n).padStart(2, '0');
+const isoOf = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const parse = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+const diff = (a, b) => Math.round((parse(b) - parse(a)) / 864e5);
+const TODAY = isoOf(new Date());
+const WEEK = '日一二三四五六';
+const md = s => { const d = parse(s); return `${pad(d.getMonth() + 1)}/${pad(d.getDate())}`; };
+const mdShort = s => { const d = parse(s); return `${d.getMonth() + 1}/${d.getDate()}`; };
+const wk = s => '周' + WEEK[parse(s).getDay()];
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  del(k) { try { localStorage.removeItem(k); } catch {} }
+};
+const splitNames = s => String(s || '').split(/[、,，;；\/\s]+/).map(x => x.trim()).filter(Boolean);
+const ICON_PIN = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 14s4.5-4.2 4.5-7.5a4.5 4.5 0 0 0-9 0C3.5 9.8 8 14 8 14Z"/><circle cx="8" cy="6.5" r="1.6"/></svg>';
+
+/* ================= state ================= */
+const S = {
+  events: [], updatedAt: '', loaded: false,
+  q: '', view: store.get('ot-view') === 'cal' ? 'cal' : 'list',
+  cal: (() => { const d = new Date(); return { y: d.getFullYear(), m: d.getMonth() }; })(),
+  pastYear: 'all', pastAll: false, ind: 'all', top: false,
+  // admin
+  mode: null, priv: null, demoData: undefined, gh: null,
+  dirtyEv: false, dirtyPriv: false,
+  tab: 'enroll', scope: 'current', admQ: '', editing: null
+};
+
+/* ================= event logic ================= */
+const endOf = e => e.end || e.start || '';
+function phase(e) {
+  const end = endOf(e);
+  if (end) { if (end < TODAY) return 'past'; }
+  else if (e.month && e.month < TODAY.slice(0, 7)) return 'past';
+  return isOpen(e) ? 'open' : 'upcoming';
+}
+const isOpen = e => e.status === 'open' && !(e.deadline && e.deadline < TODAY) && !(endOf(e) && endOf(e) < TODAY);
+const isLive = e => e.start && e.start <= TODAY && endOf(e) >= TODAY;
+function regPill(e) {
+  const p = phase(e);
+  if (p === 'past') return '<span class="pill past">已结束</span>';
+  let h = '';
+  if (isLive(e)) h += '<span class="pill live">进行中</span>';
+  if (p === 'open') h += '<span class="pill open">报名中</span>';
+  else if (e.status === 'soon') h += '<span class="pill soon">待开放</span>';
+  else h += '<span class="pill closed">报名已截止</span>';
+  return h;
+}
+function regLabel(e) {
+  const p = phase(e);
+  if (p === 'past') return '已结束';
+  if (p === 'open') return '报名中';
+  return e.status === 'soon' ? '待开放' : '报名已截止';
+}
+const days = e => e.start ? diff(e.start, endOf(e)) + 1 : 0;
+function monthKey(e) { return e.start ? e.start.slice(0, 7) : (e.month || ''); }
+function dateShort(e) {
+  if (!e.start) return e.dateNote || '日期待定';
+  return e.start === endOf(e) ? md(e.start) : `${md(e.start)}–${md(endOf(e))}`;
+}
+function dateLong(e) {
+  if (!e.start) return esc(e.dateNote || '日期待定');
+  const y = e.start.slice(0, 4);
+  const a = `${y}/${md(e.start)}（${wk(e.start)}）`;
+  if (e.start === endOf(e)) return a;
+  const b = `${endOf(e).slice(0, 4) !== y ? endOf(e).slice(0, 4) + '/' : ''}${md(endOf(e))}（${wk(endOf(e))}）`;
+  return `${a} → ${b} · ${days(e)}天`;
+}
+function dueText(e) {
+  if (!e.deadline) return { t: '截止日期待通知', soon: false };
+  const n = diff(TODAY, e.deadline);
+  if (n === 0) return { t: '今天截止', soon: true };
+  if (n <= 3) return { t: `${mdShort(e.deadline)} 截止 · 还剩${n}天`, soon: true };
+  return { t: `${mdShort(e.deadline)} 截止`, soon: false };
+}
+const INDS = ['TMT', '医药', '消费', '周期', '工业', '多行业'];
+const indOf = e => e.industry || '多行业';
+const isMulti = e => indOf(e) === '多行业';
+const indChip = e => `<span class="ind ${isMulti(e) ? 'multi' : 'single'}">${esc(indOf(e))}</span>`;
+const starsHtml = n => n ? `<span class="stars" aria-label="重要程度 ${n} 星" title="重要程度 ${n} 星">${'★'.repeat(n)}<i>${'★'.repeat(3 - n)}</i></span>` : '';
+const passFilters = e => (S.ind === 'all' || indOf(e) === S.ind) && (!S.top || (e.stars || 0) >= 3);
+function renderFilters() {
+  const el = $('#filters'); if (!el) return;
+  el.innerHTML = `<span class="lbl">行业</span><div class="chips">${['all', ...INDS].map(k => `<button type="button" class="chip-btn" data-ind-f="${k}" aria-pressed="${S.ind === k}">${k === 'all' ? '全部' : `<span class="dot" style="background:var(--${k === '多行业' ? 'multi' : 'single'})"></span>${k}`}</button>`).join('')}</div>
+    <span class="sep" aria-hidden="true"></span>
+    <button type="button" class="chip-btn" data-top-f aria-pressed="${S.top}"><span class="stars">★★★</span> 只看重点</button>`;
+}
+function matches(e, q) {
+  if (!q) return true;
+  const hay = [e.id, e.title, e.organizer, e.type, e.industry, e.location, e.theme, e.companies, e.route, e.notice, e.dateNote].join(' ').toLowerCase();
+  return q.toLowerCase().split(/\s+/).filter(Boolean).every(t => hay.includes(t));
+}
+const byStart = (a, b) => (a.start || (a.month ? a.month + '-99' : '9999')).localeCompare(b.start || (b.month ? b.month + '-99' : '9999')) || a.id.localeCompare(b.id);
+const findEv = id => S.events.find(e => e.id === id);
+
+/* ================= public rendering ================= */
+function renderPublic() {
+  const all = S.events;
+  renderFilters();
+  const vis = all.filter(e => matches(e, S.q) && passFilters(e));
+  const open = vis.filter(e => phase(e) === 'open').sort((a, b) => (a.deadline || '9999').localeCompare(b.deadline || '9999') || byStart(a, b));
+  const up = vis.filter(e => phase(e) === 'upcoming').sort(byStart);
+  const past = vis.filter(e => phase(e) === 'past').sort((a, b) => byStart(b, a));
+
+  const cnt = { open: all.filter(e => phase(e) === 'open').length, up: all.filter(e => phase(e) === 'upcoming').length, past: all.filter(e => phase(e) === 'past').length };
+  const upd = S.updatedAt ? `更新于 ${+S.updatedAt.slice(5, 7)}月${+S.updatedAt.slice(8, 10)}日` : '';
+  $('#mastMeta').innerHTML = S.loaded
+    ? `<a href="#open">正在报名<b>${cnt.open}</b></a><a href="#upcoming">即将进行<b>${cnt.up}</b></a><a href="#past">往期<b>${cnt.past}</b></a><span>${upd}</span>`
+    : '正在加载…';
+  $('#c-open').textContent = open.length;
+  $('#c-up').textContent = up.length;
+  $('#c-past').textContent = past.length;
+  $('#footNote').textContent = S.updatedAt ? `数据${upd}` : '';
+
+  // open tickets
+  $('#openList').innerHTML = open.length ? `<div class="tickets">${open.map(ticket).join('')}</div>`
+    : `<div class="empty">${S.q ? '没有匹配的正在报名活动' : (S.loaded ? '目前没有正在报名的活动' : '正在加载…')}</div>`;
+
+  // upcoming
+  $$('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === S.view)));
+  $('#upList').innerHTML = S.view === 'cal' ? calendar(vis) : monthList(up, false);
+
+  // past
+  const years = [...new Set(past.map(e => (e.start || e.month || '').slice(0, 4)).filter(Boolean))];
+  if (S.pastYear !== 'all' && !years.includes(S.pastYear)) S.pastYear = 'all';
+  $('#yearChips').innerHTML = past.length ? ['all', ...years].map(y => `<button type="button" class="chip-btn" data-year="${y}" aria-pressed="${S.pastYear === y}">${y === 'all' ? '全部' : y}</button>`).join('') : '';
+  const pl = past.filter(e => S.pastYear === 'all' || (e.start || e.month || '').startsWith(S.pastYear));
+  $('#pastList').innerHTML = pastList(pl);
+}
+
+function ticket(e) {
+  const due = dueText(e);
+  return `<button type="button" class="ticket" data-ev="${esc(e.id)}">
+    <div class="t-top"><span class="t-org">${esc(e.organizer)}</span><span class="due${due.soon ? ' soon' : ''}">${esc(due.t)}</span></div>
+    <div class="perf" aria-hidden="true"></div>
+    <div class="t-body">
+      <div class="t-meta">${indChip(e)}${starsHtml(e.stars)}</div>
+      <h3>${esc(e.title)}</h3>
+      <div class="t-when">${e.start ? `<span>${md(e.start)}</span>${e.start !== endOf(e) ? `<span class="arrow">→</span><span>${md(endOf(e))}</span>` : ''}<small>${days(e)}天${e.dateNote ? ' · ' + esc(e.dateNote) : ''}</small>` : `<span>${esc(e.dateNote || '日期待定')}</span>`}</div>
+      ${e.location ? `<div class="t-loc">${ICON_PIN}<span>${esc(e.location)}</span></div>` : ''}
+      ${e.companies ? `<p class="t-comp">${esc(e.companies)}</p>` : ''}
+      <div class="t-foot"><span>${e.quota ? `名额 <b class="mono">${e.quota}</b>` : ''}</span><span class="more">查看详情 →</span></div>
+    </div>
+  </button>`;
+}
+
+function row(e, opts = {}) {
+  const tbd = !e.start;
+  const dateCell = tbd
+    ? `<span class="r-date tbd">${esc(e.dateNote || '日期待定')}</span>`
+    : `<span class="r-date">${opts.year ? e.start.slice(0, 4) + '/' : ''}${dateShort(e)}<small>${days(e)}天</small></span>`;
+  const sub = [e.organizer, e.location].filter(Boolean).map(esc).join(' · ');
+  return `<button type="button" class="row" data-ev="${esc(e.id)}">${dateCell}<span class="r-main"><b>${e.stars ? starsHtml(e.stars) + ' ' : ''}${esc(e.title)}</b><small>${sub}</small></span><span class="r-tags">${indChip(e)}${opts.noPill ? '' : regPill(e)}</span></button>`;
+}
+
+function monthList(list) {
+  if (!list.length) return `<div class="empty">${S.q ? '没有匹配的活动' : (S.loaded ? '暂时没有其他即将进行的活动' : '正在加载…')}</div>`;
+  const groups = new Map();
+  for (const e of list) { const k = monthKey(e) || 'tbd'; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(e); }
+  return `<div class="months">${[...groups].map(([k, evs]) => `
+    <div class="month">
+      <div class="month-label">${k === 'tbd' ? '<b>时间待定</b>' : `<b>${+k.slice(5)}月</b><span>${k.slice(0, 4)} · ${evs.length}个</span>`}</div>
+      <div class="rows">${evs.map(e => row(e)).join('')}</div>
+    </div>`).join('')}</div>`;
+}
+
+function pastList(list) {
+  if (!list.length) return `<div class="empty">${S.q ? '没有匹配的往期调研' : '还没有往期调研'}</div>`;
+  const LIMIT = 12;
+  const shown = S.pastAll || S.q ? list : list.slice(0, LIMIT);
+  let html = '', curY = '';
+  let chunk = [];
+  const flush = () => { if (chunk.length) html += `<div class="rows">${chunk.join('')}</div>`; chunk = []; };
+  for (const e of shown) {
+    const y = (e.start || e.month || '').slice(0, 4);
+    if (y !== curY) { flush(); html += `<div class="year-h">${y}</div>`; curY = y; }
+    chunk.push(row(e, { noPill: true }));
+  }
+  flush();
+  if (shown.length < list.length) html += `<button type="button" class="show-all" data-act="past-all">显示全部 ${list.length} 个往期调研</button>`;
+  return html;
+}
+
+function calendar(list) {
+  const { y, m } = S.cal;
+  const first = new Date(y, m, 1);
+  const off = (first.getDay() + 6) % 7;
+  const start = addDays(first, -off);
+  const dim = new Date(y, m + 1, 0).getDate();
+  const weeks = Math.ceil((off + dim) / 7);
+  const dated = list.filter(e => e.start);
+  const barCls = e => { const p = phase(e); return `ind-${isMulti(e) ? 'multi' : 'single'}${p === 'open' ? ' is-open' : p === 'past' ? ' is-past' : ''}`; };
+  let body = '';
+  for (let w = 0; w < weeks; w++) {
+    const ws = addDays(start, w * 7), we = addDays(ws, 6);
+    const a = isoOf(ws), b = isoOf(we);
+    const evs = dated.filter(e => e.start <= b && endOf(e) >= a).sort((p, q) => p.start.localeCompare(q.start) || days(q) - days(p));
+    const lanes = [];
+    const bars = evs.map(e => {
+      const cs = e.start < a ? 0 : diff(a, e.start);
+      const ce = endOf(e) > b ? 6 : diff(a, endOf(e));
+      let lane = lanes.findIndex(end => end < cs);
+      if (lane < 0) { lane = lanes.length; lanes.push(ce); } else lanes[lane] = ce;
+      const cls = `cal-bar ${barCls(e)}${e.start < a ? ' cl' : ''}${endOf(e) > b ? ' cr' : ''}`;
+      return `<button type="button" class="${cls}" style="grid-column:${cs + 1} / span ${ce - cs + 1};grid-row:${lane + 2}" data-ev="${esc(e.id)}" title="${esc(indOf(e) + ' · ' + e.title)}">${e.stars === 3 ? '★ ' : ''}${esc(e.title)}</button>`;
+    });
+    const rows = lanes.length + 2;
+    let cells = '';
+    for (let d = 0; d < 7; d++) {
+      const day = addDays(ws, d);
+      const out = day.getMonth() !== m;
+      cells += `<div class="cal-day${out ? ' out' : ''}${isoOf(day) === TODAY ? ' today' : ''}" style="grid-column:${d + 1};grid-row:1 / ${rows + 1}"><span>${day.getDate()}</span></div>`;
+    }
+    body += `<div class="cal-week" style="grid-template-rows:26px repeat(${lanes.length}, 24px) minmax(6px,1fr)">${cells}${bars.join('')}</div>`;
+  }
+  const mk = `${y}-${pad(m + 1)}`;
+  const tbd = list.filter(e => !e.start && e.month === mk).sort(byStart);
+  return `<div class="cal">
+    <div class="cal-nav"><h3>${y}年${m + 1}月</h3><div class="btns">
+      <button type="button" class="icon-btn" data-cal="-1" aria-label="上个月">‹</button>
+      <button type="button" class="icon-btn" data-cal="0">本月</button>
+      <button type="button" class="icon-btn" data-cal="1" aria-label="下个月">›</button></div></div>
+    <div class="cal-head">${'一二三四五六日'.split('').map(d => `<span>${d}</span>`).join('')}</div>
+    ${body}
+    <div class="cal-legend"><span><i style="background:var(--single-soft);box-shadow:inset 3px 0 0 var(--single)"></i>单行业</span><span><i style="background:var(--multi-soft);box-shadow:inset 3px 0 0 var(--multi)"></i>多行业</span><span>实心色块＝正在报名</span><span>颜色变淡＝已结束</span><span>★＝重点</span></div>
+  </div>
+  ${tbd.length ? `<div class="cal-tbd"><h4>${m + 1}月 · 日期待定（${tbd.length}）</h4><div class="rows">${tbd.map(e => row(e)).join('')}</div></div>` : ''}`;
+}
+
+/* ================= detail sheet ================= */
+let lastFocus = null;
+function linkify(t) {
+  return esc(t).replace(/https?:\/\/[^\s<>"'）)】]+/g, u => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`);
+}
+function fileHref(f) { return f.url || encodeURI(f.path || ''); }
+function openSheet(id) {
+  const e = findEv(id); if (!e) return;
+  lastFocus = document.activeElement;
+  const past = phase(e) === 'past';
+  const files = (e.attachments || []).map(f => {
+    const href = fileHref(f);
+    const isImg = /\.(png|jpe?g|gif|webp)$/i.test(f.name || '');
+    if (!href) return `<li><span class="file">📎 ${esc(f.name)}</span></li>`;
+    return `<li>${isImg ? `<a href="${esc(href)}" target="_blank" rel="noopener"><img src="${esc(href)}" alt="${esc(f.name)}"></a>` : `<a href="${esc(href)}" target="_blank" rel="noopener">📄 ${esc(f.name)}</a>`}</li>`;
+  }).join('');
+  // The element card: same rows, same order, for every event.
+  const kv = [
+    ['券商', esc(e.organizer)],
+    ['类型', esc(e.type || '—')],
+    ['行业', `${indChip(e)} <span class="muted" style="font-size:12.5px">${isMulti(e) ? '跨多个行业组' : '单行业'}</span>`],
+    ['时间', `<span class="mono-ish">${dateLong(e)}</span>${e.start && e.dateNote ? `<small>${esc(e.dateNote)}</small>` : ''}`],
+    ['地点', esc(e.location || '待定')],
+    ['主题', esc(e.theme || '—')],
+    ['参访公司', e.companies ? esc(e.companies) : `<span class="tbd">${past ? '—' : '待公布'}</span>`],
+  ];
+  if (e.stars) kv.splice(3, 0, ['重要程度', `${starsHtml(e.stars)} <span class="muted" style="font-size:12.5px">${['', '一般', '值得关注', '重点'][e.stars]}</span>`]);
+  if (e.route) kv.push(['行程概要', `<span class="lines">${esc(e.route)}</span>`]);
+  if (!past) {
+    kv.push(['报名截止', e.deadline ? `${e.deadline.replace(/-/g, '/')}（${wk(e.deadline)}）` : '<span class="tbd">待通知</span>']);
+    kv.push(['名额', e.quota ? `<span class="mono">${e.quota}</span>` : '不限']);
+  }
+  if (e.notice) kv.push(['注意事项', `<span class="notice">${esc(e.notice)}</span>`]);
+  if (e.link) kv.push(['链接', linkify(e.link)]);
+  if (files) kv.push(['附件', `<ul class="d-files">${files}</ul>`]);
+  $('#sheetBody').innerHTML = `
+    <div class="d-top">${regPill(e)}<span class="d-id mono">${esc(e.id)}</span></div>
+    <h2 id="sheetTitle">${esc(e.title)}</h2>
+    <dl class="kv">${kv.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+    <div class="d-upd"><span>最后更新 ${esc(e.updatedAt || S.updatedAt || '')}</span>${S.mode ? `<button type="button" class="btn sm" data-edit="${esc(e.id)}">编辑这个活动</button>` : ''}</div>`;
+  $('#sheet').hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('.sheet-x').focus();
+}
+function closeSheet() {
+  if ($('#sheet').hidden) return;
+  $('#sheet').hidden = true;
+  document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+
+/* ================= toast ================= */
+let toastT;
+function toast(msg, ms = 3200) {
+  const t = $('#toast'); t.textContent = msg; t.hidden = false;
+  clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, ms);
+}
+
+/* ================= GitHub storage ================= */
+const b64enc = str => { const bytes = new TextEncoder().encode(str); let bin = ''; for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(bin); };
+const b64dec = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, '')), c => c.charCodeAt(0)));
+const PRIV_FILE = 'enrollment.json';
+async function ghReq(method, repo, path, body) {
+  const g = S.gh;
+  const url = `https://api.github.com/repos/${encodeURIComponent(g.owner)}/${encodeURIComponent(repo)}/contents/${path.split('/').map(encodeURIComponent).join('/')}`;
+  const res = await fetch(url, {
+    method, cache: 'no-store',
+    headers: { Authorization: `Bearer ${g.token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', ...(body ? { 'Content-Type': 'application/json' } : {}) },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if (!res.ok) { const err = new Error(`GitHub ${res.status}`); err.status = res.status; try { err.detail = (await res.json()).message; } catch {} throw err; }
+  return res.json();
+}
+function ghErrText(err, what) {
+  if (err.status === 401) return '访问密钥无效或已过期，请重新生成一个。';
+  if (err.status === 403) return `访问密钥没有${what}的写入权限。生成密钥时要勾选这个仓库，并把 Contents 设为 Read and write。`;
+  if (err.status === 404) return `找不到${what}。检查用户名和仓库名，并确认密钥能访问这个仓库。`;
+  if (err.status === 409 || err.status === 422) return '网站数据在别处被更新过（比如 Claude 刚帮你改过）。点「重新载入」拿到最新数据后再改。';
+  return `连接 GitHub 失败（${err.status || '网络错误'}）。稍后再试。`;
+}
+async function ghConnect(cfg) {
+  S.gh = { ...cfg };
+  const ev = await ghReq('GET', cfg.repo, 'data/events.json').catch(e => { throw Object.assign(e, { what: '网站仓库里的 data/events.json' }); });
+  const data = JSON.parse(b64dec(ev.content));
+  let priv = { departments: ['国际部', '混合部', '投资部', '研究部'], records: {} }, privSha = null;
+  try {
+    const p = await ghReq('GET', cfg.dataRepo, PRIV_FILE);
+    priv = JSON.parse(b64dec(p.content)); privSha = p.sha;
+  } catch (e) {
+    if (e.status !== 404) throw Object.assign(e, { what: '报名数据仓库' });
+    // 404: file not created yet — check that the repo itself is reachable
+    try { await fetch(`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.dataRepo)}`, { headers: { Authorization: `Bearer ${cfg.token}` } }).then(r => { if (!r.ok) { const er = new Error(); er.status = r.status; throw er; } }); }
+    catch (er) { throw Object.assign(er, { what: '报名数据仓库' }); }
+  }
+  S.events = normEvents(data.events); S.updatedAt = data.updatedAt || '';
+  S.priv = normPriv(priv);
+  S.gh.shaEv = ev.sha; S.gh.shaPriv = privSha;
+  S.mode = 'github'; S.dirtyEv = S.dirtyPriv = false;
+}
+async function ghSave() {
+  const g = S.gh;
+  if (S.dirtyEv) {
+    S.updatedAt = TODAY;
+    const r = await ghReq('PUT', g.repo, 'data/events.json', { message: '后台更新活动', content: b64enc(JSON.stringify({ updatedAt: S.updatedAt, events: S.events }, null, 1) + '\n'), sha: g.shaEv })
+      .catch(e => { throw Object.assign(e, { what: '网站仓库' }); });
+    g.shaEv = r.content.sha; S.dirtyEv = false;
+  }
+  if (S.dirtyPriv) {
+    const body = { message: '后台更新部门报名', content: b64enc(JSON.stringify(S.priv, null, 1) + '\n') };
+    if (g.shaPriv) body.sha = g.shaPriv;
+    const r = await ghReq('PUT', g.dataRepo, PRIV_FILE, body).catch(e => { throw Object.assign(e, { what: '报名数据仓库' }); });
+    g.shaPriv = r.content.sha; S.dirtyPriv = false;
+  }
+}
+async function ghUpload(id, file) {
+  const safe = file.name.replace(/[\\/#?%*:|"<>]/g, '_').replace(/\s+/g, '_');
+  const path = `files/${id}/${Date.now().toString(36)}-${safe}`;
+  const b64 = await new Promise((ok, no) => { const r = new FileReader(); r.onload = () => ok(String(r.result).split(',')[1]); r.onerror = no; r.readAsDataURL(file); });
+  await ghReq('PUT', S.gh.repo, path, { message: `上传附件 ${file.name}`, content: b64 }).catch(e => { throw Object.assign(e, { what: '网站仓库' }); });
+  return { name: file.name, path };
+}
+function normEvents(list) {
+  return (list || []).map(e => {
+    if (e.detail && !e.theme) e.theme = e.detail;
+    delete e.detail;
+    return e;
+  });
+}
+function normPriv(p) {
+  p = p || {};
+  return { departments: Array.isArray(p.departments) && p.departments.length ? p.departments : ['国际部', '混合部', '投资部', '研究部'], records: p.records || {} };
+}
+function guessRepo() {
+  const host = location.hostname;
+  if (!host.endsWith('github.io')) return {};
+  const owner = host.split('.')[0];
+  const seg = location.pathname.split('/').filter(Boolean)[0];
+  const repo = seg && !seg.includes('.') ? seg : host;
+  return { owner, repo, dataRepo: `${repo}-data` };
+}
+
+/* ================= admin ================= */
+function markDirty(kind) { if (kind === 'ev') S.dirtyEv = true; else S.dirtyPriv = true; updateDirty(); }
+function updateDirty() {
+  const el = $('#dirtyNote'); if (!el) return;
+  const on = S.dirtyEv || S.dirtyPriv;
+  el.textContent = on ? '有未保存的修改' : (S.mode === 'demo' ? '演示模式不会保存' : '已全部保存');
+  el.className = 'dirty' + (on ? ' on' : '');
+}
+window.addEventListener('beforeunload', ev => { if (S.mode === 'github' && (S.dirtyEv || S.dirtyPriv)) { ev.preventDefault(); ev.returnValue = ''; } });
+
+function renderAdmin() {
+  const root = $('#admin');
+  document.body.classList.add('admin');
+  if (!S.mode) { root.innerHTML = connectView(); const f = $('#ghForm'); if (f) f.addEventListener('submit', onConnect); return; }
+  const chip = S.mode === 'demo' ? '演示模式 · 修改不会保存到网上' : `GitHub · ${esc(S.gh.owner)}/${esc(S.gh.repo)}`;
+  root.innerHTML = `
+    <div class="adm-bar"><div class="wrap adm-bar-in">
+      <div class="adm-title"><b>后台管理</b><span class="mode-chip">${chip}</span></div>
+      <nav class="tabs" role="tablist">
+        <button type="button" role="tab" data-tab="enroll" aria-selected="${S.tab === 'enroll'}">部门报名</button>
+        <button type="button" role="tab" data-tab="events" aria-selected="${S.tab === 'events'}">活动管理</button>
+      </nav>
+      <div class="adm-actions"><span class="dirty" id="dirtyNote"></span>
+        <button type="button" class="btn primary" data-act="save" id="saveBtn">保存</button>
+        <a class="btn ghost" href="#" data-act="back">返回网站</a></div>
+    </div></div>
+    <div class="wrap adm-body" id="admBody"></div>`;
+  renderTab(); updateDirty();
+}
+function connectView() {
+  const cfg = { ...guessRepo(), ...(store.get('ot-gh') || {}) };
+  const demo = S.demoData;
+  return `
+  <div class="wrap adm-intro"><h1>后台管理</h1><p>在这里开关报名、修改活动、填写各部门报名名单并导出 Excel。部门报名名单只保存在不公开的仓库里，网站访客看不到。</p></div>
+  <div class="wrap connect">
+    <section class="card">
+      <h2>连接 GitHub</h2>
+      <form id="ghForm" class="form-grid" novalidate>
+        <div class="field"><label for="ghOwner">GitHub 用户名</label><input id="ghOwner" value="${esc(cfg.owner || '')}" autocomplete="username" required></div>
+        <div class="field"><label for="ghRepo">网站仓库</label><input id="ghRepo" value="${esc(cfg.repo || 'overseas-tour')}" required></div>
+        <div class="field full"><label for="ghData">报名数据仓库（不公开）</label><input id="ghData" value="${esc(cfg.dataRepo || 'overseas-tour-data')}" required></div>
+        <div class="field full"><label for="ghToken">访问密钥</label><input id="ghToken" type="password" autocomplete="off" value="${esc(cfg.token || '')}" placeholder="github_pat_…" required><span class="hint">只保存在这台电脑的浏览器里，不会上传到网站。</span></div>
+        <div class="full" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn primary" type="submit" id="ghBtn">连接</button><p class="form-err" id="ghErr"></p></div>
+      </form>
+      <details><summary>怎么获取访问密钥</summary><ol>
+        <li>登录 GitHub，打开 Settings → Developer settings → Personal access tokens → Fine-grained tokens，点 Generate new token。</li>
+        <li>Repository access 选 Only select repositories，勾选网站仓库和报名数据仓库。</li>
+        <li>Permissions 里把 Contents 设为 Read and write。</li>
+        <li>生成后复制，粘贴到上面的「访问密钥」。</li>
+      </ol></details>
+    </section>
+    ${demo ? `<section class="card"><h2>先试用</h2><p class="muted">用你现在的报名表数据打开后台。所有功能都能操作，包括导出 Excel；修改只在这个页面里生效，不会保存到网上。</p><div><button type="button" class="btn" data-act="demo">打开演示模式</button></div></section>` : ''}
+  </div>`;
+}
+async function onConnect(ev) {
+  ev.preventDefault();
+  const cfg = { owner: $('#ghOwner').value.trim(), repo: $('#ghRepo').value.trim(), dataRepo: $('#ghData').value.trim(), token: $('#ghToken').value.trim() };
+  const err = $('#ghErr');
+  if (!cfg.owner || !cfg.repo || !cfg.dataRepo || !cfg.token) { err.textContent = '四项都要填。'; return; }
+  const btn = $('#ghBtn'); btn.disabled = true; btn.textContent = '连接中…'; err.textContent = '';
+  try { await ghConnect(cfg); store.set('ot-gh', cfg); renderAdmin(); toast('已连接，数据是最新的'); }
+  catch (e) { S.gh = null; S.mode = null; err.textContent = ghErrText(e, e.what || '仓库'); btn.disabled = false; btn.textContent = '连接'; }
+}
+
+function scoped() {
+  const q = S.admQ;
+  let list = S.events.filter(e => matches(e, q));
+  const ph = e => phase(e);
+  if (S.scope === 'open') list = list.filter(e => ph(e) === 'open');
+  else if (S.scope === 'current') list = list.filter(e => ph(e) !== 'past');
+  else if (S.scope === 'past') list = list.filter(e => ph(e) === 'past');
+  const rank = e => ({ open: 0, upcoming: 1, past: 2 })[ph(e)];
+  return list.sort((a, b) => rank(a) - rank(b) || (rank(a) === 2 ? byStart(b, a) : byStart(a, b)));
+}
+function scopeBar() {
+  const opts = [['open', '正在报名'], ['current', '当前及未来'], ['past', '往期'], ['all', '全部']];
+  return `<div class="seg" role="group" aria-label="范围">${opts.map(([k, l]) => `<button type="button" data-scope="${k}" aria-pressed="${S.scope === k}">${l}</button>`).join('')}</div>
+    <label class="search" for="admQ"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg><span class="sr">搜索活动</span><input id="admQ" type="search" placeholder="搜索活动" value="${esc(S.admQ)}" autocomplete="off"></label>`;
+}
+function renderTab() {
+  $$('[data-tab]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === S.tab)));
+  const body = $('#admBody');
+  if (S.tab === 'enroll') body.innerHTML = enrollView(); else body.innerHTML = eventsView();
+  $$('.names-cell textarea, .note-in', body).forEach(autosize);
+}
+const autosize = t => { if (CSS.supports && CSS.supports('field-sizing', 'content')) return; t.style.height = 'auto'; t.style.height = t.scrollHeight + 2 + 'px'; };
+function rec(id) { return S.priv.records[id] || (S.priv.records[id] = { names: {}, note: '' }); }
+function rowTotal(id) { const r = S.priv.records[id]; if (!r) return 0; return S.priv.departments.reduce((s, d) => s + splitNames(r.names && r.names[d]).length, 0); }
+
+function enrollView() {
+  const list = scoped(); const deps = S.priv.departments;
+  const conf = conflicts();
+  const head = `<tr><th class="stick" scope="col">活动</th><th class="num" scope="col">名额</th>${deps.map(d => `<th scope="col">${esc(d)}</th>`).join('')}<th class="num" scope="col">合计</th><th class="num" scope="col">剩余</th><th scope="col">内部备注（仅后台可见）</th></tr>`;
+  const rows = list.map(e => {
+    const r = S.priv.records[e.id] || { names: {}, note: '' };
+    const tot = rowTotal(e.id);
+    const rem = e.quota ? e.quota - tot : null;
+    return `<tr data-id="${esc(e.id)}" class="${rem !== null && rem < 0 ? 'over' : ''}">
+      <th class="stick" scope="row"><div class="ev-cell"><b>${esc(e.title)}</b><small><span class="mono">${esc(e.id)}</span><span>${esc(e.organizer)}</span><span class="mono">${esc(dateShort(e))}</span>${regPill(e)}</small></div></th>
+      <td class="num"><input class="in-num" id="q-${esc(e.id)}" type="number" min="0" inputmode="numeric" data-quota="${esc(e.id)}" value="${e.quota ?? ''}" placeholder="—" aria-label="名额"></td>
+      ${deps.map((d, i) => { const v = (r.names && r.names[d]) || ''; const n = splitNames(v).length; return `<td><div class="names-cell"><textarea rows="1" id="n-${esc(e.id)}-${i}" data-names="${esc(e.id)}" data-dept="${esc(d)}" aria-label="${esc(d)}报名人员" placeholder="姓名">${esc(v)}</textarea><span class="cnt${n ? ' has' : ''}" id="c-${esc(e.id)}-${i}">${n}</span></div></td>`; }).join('')}
+      <td class="num"><b id="t-${esc(e.id)}">${tot}</b></td>
+      <td class="num rem${rem !== null && rem < 0 ? ' neg' : ''}" id="r-${esc(e.id)}">${rem === null ? '—' : rem}</td>
+      <td><textarea class="note-in" rows="1" id="note-${esc(e.id)}" data-note="${esc(e.id)}" aria-label="内部备注" placeholder="—">${esc(r.note || '')}</textarea></td>
+    </tr>`;
+  }).join('');
+  return `
+    <div class="toolbar">${scopeBar()}<span class="grow"></span><button type="button" class="btn primary" data-act="export">导出 Excel（${list.length} 个活动）</button></div>
+    <div class="depts"><span class="lbl">部门</span>${deps.map((d, i) => `<span class="dept-chip" data-di="${i}"><input id="dep-${i}" value="${esc(d)}" data-dep="${i}" aria-label="部门名称"><button type="button" data-deldep="${i}" aria-label="删除${esc(d)}" title="删除">✕</button></span>`).join('')}<button type="button" class="btn sm" data-act="add-dep">+ 添加部门</button></div>
+    ${conf.length ? `<div class="alert"><b>时间冲突提醒</b>：以下同事报了时间重叠的活动<ul>${conf.slice(0, 8).map(c => `<li>${esc(c.n)}：${esc(c.a.title)}（${dateShort(c.a)}）与 ${esc(c.b.title)}（${dateShort(c.b)}）</li>`).join('')}</ul></div>` : ''}
+    <p class="muted" style="margin:0 0 10px;font-size:12.5px">姓名之间用顿号、逗号或空格隔开都可以，离开输入框后会自动整理成「、」。名额留空表示不限。</p>
+    ${list.length ? `<div class="table-wrap"><table class="grid"><thead>${head}</thead><tbody>${rows}</tbody><tfoot>${totalsRow(list)}</tfoot></table></div>` : '<div class="empty">这个范围里没有活动</div>'}`;
+}
+function totalsRow(list) {
+  const deps = S.priv.departments;
+  const per = deps.map(d => list.reduce((s, e) => s + splitNames(S.priv.records[e.id]?.names?.[d]).length, 0));
+  return `<tr><th class="stick" scope="row">各部门人次</th><td></td>${per.map((n, i) => `<td class="num"><b class="mono" id="ft-${i}">${n}</b></td>`).join('')}<td class="num"><b class="mono" id="ft-all">${per.reduce((a, b) => a + b, 0)}</b></td><td></td><td></td></tr>`;
+}
+function refreshCounts(id) {
+  const e = findEv(id); const deps = S.priv.departments; const r = S.priv.records[id] || { names: {} };
+  deps.forEach((d, i) => { const c = $(`#c-${CSS.escape(id)}-${i}`); if (c) { const n = splitNames(r.names?.[d]).length; c.textContent = n; c.classList.toggle('has', n > 0); } });
+  const tot = rowTotal(id); const t = $(`#t-${CSS.escape(id)}`); if (t) t.textContent = tot;
+  const rem = e && e.quota ? e.quota - tot : null; const rr = $(`#r-${CSS.escape(id)}`);
+  if (rr) { rr.textContent = rem === null ? '—' : rem; rr.classList.toggle('neg', rem !== null && rem < 0); }
+  const tr = rr && rr.closest('tr'); if (tr) tr.classList.toggle('over', rem !== null && rem < 0);
+  const list = scoped();
+  deps.forEach((d, i) => { const f = $(`#ft-${i}`); if (f) f.textContent = list.reduce((s, e2) => s + splitNames(S.priv.records[e2.id]?.names?.[d]).length, 0); });
+  const fa = $('#ft-all'); if (fa) fa.textContent = list.reduce((s, e2) => s + rowTotal(e2.id), 0);
+}
+function conflicts() {
+  const map = new Map();
+  for (const e of S.events) {
+    if (phase(e) === 'past' || !e.start) continue;
+    const r = S.priv.records[e.id]; if (!r) continue;
+    const names = new Set(Object.values(r.names || {}).flatMap(splitNames));
+    for (const n of names) { if (!map.has(n)) map.set(n, []); map.get(n).push(e); }
+  }
+  const out = [];
+  for (const [n, list] of map) {
+    list.sort((a, b) => a.start.localeCompare(b.start));
+    for (let i = 0; i < list.length; i++) for (let j = i + 1; j < list.length; j++) if (list[j].start <= endOf(list[i])) out.push({ n, a: list[i], b: list[j] });
+  }
+  return out;
+}
+
+function eventsView() {
+  const list = scoped();
+  return `
+    <div class="toolbar">${scopeBar()}<span class="grow"></span><button type="button" class="btn primary" data-act="new">+ 新建活动</button></div>
+    <p class="muted" style="margin:0 0 10px;font-size:12.5px">把状态改成「报名中」，活动就会出现在网站最上方；过了报名截止日会自动收起。点「编辑」可以粘贴段子、上传附件。</p>
+    ${list.length ? `<div class="table-wrap"><table class="grid"><thead><tr><th class="stick" scope="col">活动</th><th scope="col">时间</th><th scope="col">行业</th><th scope="col">重要程度</th><th scope="col">报名状态</th><th scope="col">报名截止</th><th scope="col"><span class="sr">操作</span></th></tr></thead><tbody>
+    ${list.map(e => `<tr>
+      <th class="stick" scope="row"><div class="ev-cell"><b>${esc(e.title)}</b><small><span class="mono">${esc(e.id)}</span><span>${esc(e.organizer)}</span>${(e.attachments || []).length ? `<span>📎${e.attachments.length}</span>` : ''}</small></div></th>
+      <td class="mono" style="white-space:nowrap">${esc(e.start ? e.start.slice(0, 4) + '/' + dateShort(e) : (e.dateNote || '待定'))}</td>
+      <td><select class="ind-sel" id="ind-${esc(e.id)}" data-ind="${esc(e.id)}" aria-label="行业">${INDS.map(k => `<option${indOf(e) === k ? ' selected' : ''}>${k}</option>`).join('')}</select></td>
+      <td><span class="star-pick" role="group" aria-label="重要程度">${[1, 2, 3].map(n => `<button type="button" class="${(e.stars || 0) >= n ? 'on' : ''}" data-star="${esc(e.id)}" data-n="${n}" aria-label="${n} 星">★</button>`).join('')}</span></td>
+      <td>${phase(e) === 'past' ? '<span class="pill past">已结束</span>' : `<select class="st-sel" id="st-${esc(e.id)}" data-status="${esc(e.id)}" aria-label="报名状态">
+        <option value="soon"${e.status === 'soon' ? ' selected' : ''}>待开放</option>
+        <option value="open"${e.status === 'open' ? ' selected' : ''}>报名中</option>
+        <option value="closed"${e.status === 'closed' ? ' selected' : ''}>已截止</option></select>${e.status === 'open' && !isOpen(e) ? '<div class="muted" style="font-size:11.5px">已过截止日</div>' : ''}`}</td>
+      <td class="mono" style="white-space:nowrap">${e.deadline ? esc(e.deadline.slice(5).replace('-', '/')) : '—'}</td>
+      <td><div class="row-actions"><button type="button" class="btn sm" data-edit="${esc(e.id)}">编辑</button></div></td>
+    </tr>`).join('')}</tbody></table></div>` : '<div class="empty">这个范围里没有活动</div>'}`;
+}
+
+/* ----- editor drawer ----- */
+function nextId() {
+  const n = S.events.map(e => /^E(\d+)$/.exec(e.id)).filter(Boolean).map(m => +m[1]);
+  return 'E' + String((n.length ? Math.max(...n) : 0) + 1).padStart(3, '0');
+}
+function openEditor(id) {
+  closeSheet();
+  const isNew = !id;
+  const e = isNew ? { id: nextId(), title: '', organizer: '', type: '', industry: '多行业', stars: 0, start: null, end: null, month: '', dateNote: '', location: '', theme: '', companies: '', route: '', notice: '', status: 'soon', deadline: null, quota: null, attachments: [], link: '' } : JSON.parse(JSON.stringify(findEv(id)));
+  const pr = S.priv.records[e.id] || {};
+  S.editing = { isNew, ev: e, note: pr.note || '', raw: pr.raw || '' };
+  const tbd = !e.start && !isNew;
+  $('#evForm').innerHTML = `
+    <div class="drawer-head"><h2>${isNew ? '新建活动' : '编辑活动'} <span class="mono muted" style="font-size:13px">${esc(e.id)}</span></h2><button type="button" class="icon-btn" data-dclose aria-label="关闭">✕</button></div>
+    <div class="drawer-body">
+      <div class="field"><label for="f-raw">段子原文（仅后台可见）</label><textarea id="f-raw" rows="5" placeholder="把券商发来的段子粘贴在这里留底，不会显示在网站上。">${esc(S.editing.raw)}</textarea><span class="hint">也可以把段子或 PDF 直接发给 Claude，下面的要素会按统一格式填好。</span></div>
+      <div class="fieldset">
+        <div class="fs-title">活动要素（网站详情里显示）</div>
+        <div class="form-grid">
+          <div class="field full"><label for="f-title">活动名称 *</label><input id="f-title" value="${esc(e.title)}" placeholder="中文名（英文名）" required></div>
+          <div class="field"><label for="f-org">券商 / 主办方 *</label><input id="f-org" value="${esc(e.organizer)}" required></div>
+          <div class="field"><label for="f-type">类型</label><input id="f-type" list="type-opts" value="${esc(e.type || '')}" placeholder="调研 / 会议 / 企业日…"><datalist id="type-opts"><option value="调研"><option value="会议"><option value="企业日"><option value="展会"><option value="晚宴"><option value="线上"></datalist></div>
+          <div class="field"><label for="f-ind">行业</label><select id="f-ind">${INDS.map(k => `<option${indOf(e) === k ? ' selected' : ''}>${k}</option>`).join('')}</select></div>
+          <div class="field"><span class="lbl">重要程度</span><div class="radio-row" role="radiogroup" aria-label="重要程度">${[[0, '不标'], [1, '★'], [2, '★★'], [3, '★★★']].map(([v, l]) => `<label><input type="radio" name="f-stars" value="${v}"${(e.stars || 0) === v ? ' checked' : ''}> ${l}</label>`).join('')}</div></div>
+          <div class="field full"><label for="f-loc">地点</label><input id="f-loc" value="${esc(e.location)}" placeholder="国家 · 城市，多个城市用 / 隔开"></div>
+          <div class="field full"><label for="f-theme">主题</label><input id="f-theme" value="${esc(e.theme || '')}" maxlength="60" placeholder="一句话，30 字以内"></div>
+          <div class="field full"><label for="f-comp">参访公司 / 嘉宾</label><textarea id="f-comp" rows="3" placeholder="按行程顺序，用顿号隔开；有股票代码就附上，如 Advantest（6857 JP）">${esc(e.companies)}</textarea></div>
+          <div class="field full"><label for="f-route">行程概要（选填）</label><textarea id="f-route" rows="3" placeholder="一行一个城市，如：11/16 釜山">${esc(e.route || '')}</textarea></div>
+          <div class="field full"><label for="f-notice">注意事项</label><input id="f-notice" value="${esc(e.notice || '')}" placeholder="如：仅限受邀机构投资者；需联系对口销售预约"></div>
+        </div>
+      </div>
+      <div class="fieldset">
+        <div class="fs-title">时间</div>
+        <label class="check"><input type="checkbox" id="f-tbd"${tbd ? ' checked' : ''}> 具体日期还没定</label>
+        <div class="form-grid" id="f-dates"${tbd ? ' hidden' : ''}>
+          <div class="field"><label for="f-start">开始日期</label><input type="date" id="f-start" value="${esc(e.start || '')}"></div>
+          <div class="field"><label for="f-end">结束日期</label><input type="date" id="f-end" value="${esc(e.end || '')}"></div>
+        </div>
+        <div class="form-grid" id="f-month-wrap"${tbd ? '' : ' hidden'}>
+          <div class="field"><label for="f-month">大概在哪个月</label><input type="month" id="f-month" value="${esc(e.month || '')}"></div>
+        </div>
+        <div class="field"><label for="f-dnote">时间补充说明</label><input id="f-dnote" value="${esc(e.dateNote)}" placeholder="如：另 12/10、12/15 Zoom；或「11月（待定）」"></div>
+      </div>
+      <div class="fieldset">
+        <div class="fs-title">报名</div>
+        <div class="radio-row" role="radiogroup" aria-label="报名状态">
+          ${[['soon', '待开放'], ['open', '报名中'], ['closed', '已截止']].map(([v, l]) => `<label><input type="radio" name="f-status" value="${v}"${e.status === v ? ' checked' : ''}> ${l}</label>`).join('')}
+        </div>
+        <div class="form-grid">
+          <div class="field"><label for="f-deadline">报名截止</label><input type="date" id="f-deadline" value="${esc(e.deadline || '')}"></div>
+          <div class="field"><label for="f-quota">名额</label><input type="number" min="0" inputmode="numeric" id="f-quota" value="${e.quota ?? ''}" placeholder="留空表示不限"></div>
+        </div>
+      </div>
+      <div class="fieldset">
+        <div class="fs-title">附件</div>
+        <ul class="att-list" id="f-atts"></ul>
+        <div><label class="btn sm" for="f-file">上传文件</label><input type="file" id="f-file" multiple hidden accept=".pdf,.png,.jpg,.jpeg,.webp,.gif,.doc,.docx,.xls,.xlsx,.ppt,.pptx"></div>
+        <span class="hint muted" style="font-size:12px">PDF、海报图片、Word、Excel 都可以。图片会直接显示在详情里。</span>
+      </div>
+      <div class="field"><label for="f-link">报名链接 / 参考链接</label><input id="f-link" value="${esc(e.link || '')}" placeholder="https://…"></div>
+      <div class="field"><label for="f-note">内部备注（仅后台可见）</label><textarea id="f-note" rows="2">${esc(S.editing.note)}</textarea></div>
+      <p class="form-err" id="f-err"></p>
+    </div>
+    <div class="drawer-foot">${isNew ? '' : `<button type="button" class="btn danger left" data-act="del-ev">删除活动</button>`}<button type="button" class="btn" data-dclose>取消</button><button type="submit" class="btn primary">${S.mode === 'github' ? '完成（之后点保存）' : '完成'}</button></div>`;
+  renderAtts();
+  $('#drawer').hidden = false; document.body.style.overflow = 'hidden';
+  $('#f-title').focus();
+}
+function renderAtts() {
+  const list = S.editing.ev.attachments || [];
+  $('#f-atts').innerHTML = list.length ? list.map((f, i) => `<li><span>📎 ${esc(f.name)}</span><button type="button" class="btn sm" data-delatt="${i}">移除</button></li>`).join('') : '<li class="muted" style="border-style:dashed">还没有附件</li>';
+}
+function closeEditor() { $('#drawer').hidden = true; document.body.style.overflow = ''; S.editing = null; }
+function submitEditor(ev) {
+  ev.preventDefault();
+  const ed = S.editing; if (!ed) return;
+  const e = ed.ev; const v = id => $('#' + id).value.trim();
+  e.title = v('f-title'); e.organizer = v('f-org'); e.type = v('f-type'); e.industry = $('#f-ind').value; e.stars = +((document.querySelector('input[name="f-stars"]:checked') || {}).value || 0); e.location = v('f-loc'); e.theme = v('f-theme');
+  e.companies = v('f-comp'); e.route = $('#f-route').value.split('\n').map(x => x.trim()).filter(Boolean).join('\n'); e.notice = v('f-notice');
+  delete e.detail;
+  const tbd = $('#f-tbd').checked;
+  e.start = tbd ? null : (v('f-start') || null); e.end = tbd ? null : (v('f-end') || e.start);
+  if (e.start && e.end && e.end < e.start) e.end = e.start;
+  e.month = tbd ? v('f-month') : ''; e.dateNote = v('f-dnote');
+  e.status = (document.querySelector('input[name="f-status"]:checked') || {}).value || 'soon';
+  e.deadline = v('f-deadline') || null;
+  const q = v('f-quota'); e.quota = q === '' ? null : Math.max(0, parseInt(q, 10) || 0) || null;
+  e.link = v('f-link'); e.updatedAt = TODAY;
+  const err = $('#f-err');
+  if (!e.title || !e.organizer) { err.textContent = '活动名称和券商要填。'; return; }
+  if (!tbd && !e.start) { err.textContent = '请填开始日期，或者勾选「具体日期还没定」。'; return; }
+  if (ed.isNew) S.events.push(e); else { const i = S.events.findIndex(x => x.id === e.id); S.events[i] = e; }
+  markDirty('ev');
+  const note = $('#f-note').value.trim();
+  if (note !== ed.note) { rec(e.id).note = note; markDirty('priv'); }
+  const raw = $('#f-raw').value.replace(/\s+$/, '');
+  if (raw !== ed.raw) { rec(e.id).raw = raw; markDirty('priv'); }
+  closeEditor(); renderTab();
+  toast(S.mode === 'github' ? '已修改，记得点右上角「保存」' : '已修改（演示模式）');
+}
+
+/* ----- export ----- */
+let excelLib = null;
+function loadScript(src) { return new Promise((ok, no) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => no(new Error('load')); document.head.appendChild(s); }); }
+const colL = n => { let s = ''; n++; while (n > 0) { const r = (n - 1) % 26; s = String.fromCharCode(65 + r) + s; n = Math.floor((n - 1) / 26); } return s; };
+const xDate = s => s ? new Date(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10))) : null;
+async function exportExcel() {
+  const btn = $('[data-act="export"]'); if (btn) { btn.disabled = true; btn.textContent = '正在生成…'; }
+  try {
+    if (!excelLib) {
+      try { await loadScript('https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js'); }
+      catch { await loadScript('https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js'); }
+      excelLib = window.ExcelJS;
+    }
+    const list = scoped(); const deps = S.priv.departments;
+    const wb = new excelLib.Workbook(); wb.creator = '海外调研日程';
+    const green = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF14284B' } };
+    const thin = { style: 'thin', color: { argb: 'FFDDE3EC' } };
+    const styleHead = ws => { const r = ws.getRow(1); r.height = 22; r.eachCell(c => { c.font = { bold: true, color: { argb: 'FFFFFFFF' } }; c.fill = green; c.alignment = { vertical: 'middle', wrapText: true }; }); };
+    const border = ws => ws.eachRow(r => r.eachCell({ includeEmpty: true }, c => { c.border = { top: thin, bottom: thin, left: thin, right: thin }; if (!c.alignment) c.alignment = { vertical: 'top', wrapText: true }; }));
+
+    // sheet 1: 部门报名
+    const ws = wb.addWorksheet('部门报名', { views: [{ state: 'frozen', xSplit: 3, ySplit: 1 }] });
+    const head = ['活动编号', '券商', '活动名称', '时间', '地点', '报名状态', '报名截止', '名额', '报名总人数', '剩余名额'];
+    deps.forEach(d => head.push(`${d}报名人员`, `${d}人数`));
+    head.push('内部备注');
+    ws.addRow(head);
+    const base = 10; // first dept column index (0-based)
+    list.forEach((e, i) => {
+      const r = i + 2; const recd = S.priv.records[e.id] || { names: {} };
+      const vals = [e.id, e.organizer, e.title, e.start ? dateShort(e) + (e.dateNote ? `（${e.dateNote}）` : '') : (e.dateNote || '待定'), e.location, regLabel(e), xDate(e.deadline), e.quota ?? null, null, null];
+      const countCols = [];
+      deps.forEach((d, k) => {
+        const names = splitNames(recd.names?.[d]).join('、');
+        const nc = colL(base + k * 2), cc = colL(base + k * 2 + 1);
+        vals.push(names || null, { formula: `IF(TRIM(${nc}${r})="",0,LEN(TRIM(${nc}${r}))-LEN(SUBSTITUTE(TRIM(${nc}${r}),"、",""))+1)`, result: splitNames(names).length });
+        countCols.push(cc + r);
+      });
+      vals.push(recd.note || null);
+      const tot = rowTotal(e.id);
+      vals[8] = { formula: countCols.join('+') || '0', result: tot };
+      vals[9] = { formula: `IF(H${r}="","",H${r}-I${r})`, result: e.quota ? e.quota - tot : '' };
+      ws.addRow(vals);
+    });
+    ws.getColumn(7).numFmt = 'yyyy-mm-dd';
+    const widths = [9, 12, 38, 18, 18, 10, 12, 7, 10, 9];
+    widths.forEach((w, i) => { ws.getColumn(i + 1).width = w; });
+    deps.forEach((d, k) => { ws.getColumn(base + k * 2 + 1).width = 22; ws.getColumn(base + k * 2 + 2).width = 8; });
+    ws.getColumn(base + deps.length * 2 + 1).width = 36;
+    styleHead(ws); border(ws);
+
+    // sheet 2: 活动总表
+    const ws2 = wb.addWorksheet('活动总表', { views: [{ state: 'frozen', ySplit: 1 }] });
+    ws2.addRow(['活动编号', '券商', '活动名称', '类型', '行业', '重要程度', '开始日期', '结束日期', '时间说明', '地点', '主题', '参访公司 / 嘉宾', '行程概要', '报名状态', '报名截止', '名额', '注意事项', '链接', '附件']);
+    list.forEach(e => ws2.addRow([e.id, e.organizer, e.title, e.type || null, indOf(e), e.stars ? '★'.repeat(e.stars) : null, xDate(e.start), xDate(endOf(e)), e.dateNote || null, e.location, e.theme || null, e.companies || null, e.route || null, regLabel(e), xDate(e.deadline), e.quota ?? null, e.notice || null, e.link || null, (e.attachments || []).map(f => f.name).join('、') || null]));
+    [7, 8, 15].forEach(c => { ws2.getColumn(c).numFmt = 'yyyy-mm-dd'; });
+    [9, 12, 36, 8, 8, 9, 12, 12, 16, 22, 30, 50, 22, 10, 12, 7, 26, 24, 20].forEach((w, i) => { ws2.getColumn(i + 1).width = w; });
+    styleHead(ws2); border(ws2);
+
+    // sheet 3: 汇总
+    const ws3 = wb.addWorksheet('汇总');
+    ws3.addRow(['部门', '报名总人次', '参与活动数']);
+    const last = list.length + 1;
+    deps.forEach((d, k) => {
+      const nc = colL(base + k * 2 + 1); // that department's count column
+      const per = list.reduce((s, e) => s + splitNames(S.priv.records[e.id]?.names?.[d]).length, 0);
+      const evs = list.filter(e => splitNames(S.priv.records[e.id]?.names?.[d]).length > 0).length;
+      ws3.addRow([d, { formula: last > 1 ? `SUM(部门报名!${nc}2:${nc}${last})` : '0', result: per }, { formula: last > 1 ? `COUNTIF(部门报名!${nc}2:${nc}${last},">0")` : '0', result: evs }]);
+    });
+    const scopeName = { open: '正在报名', current: '当前及未来', past: '往期', all: '全部' }[S.scope];
+    ws3.addRow([]); ws3.addRow([`导出范围：${scopeName}${S.admQ ? `（搜索「${S.admQ}」）` : ''}，共 ${list.length} 个活动；导出时间 ${TODAY}`]);
+    ws3.getColumn(1).width = 14; ws3.getColumn(2).width = 12; ws3.getColumn(3).width = 12;
+    styleHead(ws3);
+
+    const buf = await wb.xlsx.writeBuffer();
+    const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    await saveFile(blob, `海外调研报名_${scopeName}_${TODAY.replace(/-/g, '')}.xlsx`);
+  } catch (err) {
+    toast(err && err.message === 'load' ? 'Excel 组件没有加载出来，检查网络后再试' : '导出失败：' + (err && (err.message || err.code) || '未知错误'));
+  } finally {
+    const b = $('[data-act="export"]'); if (b) { b.disabled = false; b.textContent = `导出 Excel（${scoped().length} 个活动）`; }
+  }
+}
+async function saveFile(blob, filename) {
+  let dl = null;
+  try { if (window.claude && typeof window.claude.use === 'function') dl = await window.claude.use('downloads'); } catch { dl = null; }
+  if (dl) {
+    try { await dl.save({ filename, data: blob }); toast('已导出 ' + filename); }
+    catch (e) { if (e && e.code === 'declined') return; toast('没有导出成功：' + (e && (e.message || e.code))); }
+    return;
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  toast('已导出 ' + filename);
+}
+
+/* ================= routing & events ================= */
+function route() {
+  const admin = location.hash === '#admin';
+  $('#public').hidden = admin; $('#admin').hidden = !admin;
+  closeSheet();
+  if (admin) renderAdmin();
+  else { document.body.classList.remove('admin'); renderPublic(); }
+}
+window.addEventListener('hashchange', route);
+
+document.addEventListener('click', async ev => {
+  const t = ev.target;
+  const evBtn = t.closest('[data-ev]'); if (evBtn) { openSheet(evBtn.dataset.ev); return; }
+  if (t.closest('[data-close]')) { closeSheet(); return; }
+  if (t.closest('[data-dclose]')) { closeEditor(); return; }
+  const v = t.closest('[data-view]'); if (v) { S.view = v.dataset.view; store.set('ot-view', S.view); renderPublic(); return; }
+  const c = t.closest('[data-cal]'); if (c) {
+    const n = +c.dataset.cal; if (n === 0) { const d = new Date(); S.cal = { y: d.getFullYear(), m: d.getMonth() }; }
+    else { const d = new Date(S.cal.y, S.cal.m + n, 1); S.cal = { y: d.getFullYear(), m: d.getMonth() }; }
+    renderPublic(); return;
+  }
+  const y = t.closest('[data-year]'); if (y) { S.pastYear = y.dataset.year; renderPublic(); return; }
+  const fi = t.closest('[data-ind-f]'); if (fi) { S.ind = fi.dataset.indF; renderPublic(); return; }
+  if (t.closest('[data-top-f]')) { S.top = !S.top; renderPublic(); return; }
+  const st = t.closest('[data-star]'); if (st) {
+    const e = findEv(st.dataset.star); const n = +st.dataset.n;
+    e.stars = (e.stars || 0) === n ? 0 : n; e.updatedAt = TODAY; markDirty('ev'); renderTab();
+    toast(`「${e.title.slice(0, 18)}」${e.stars ? '设为 ' + '★'.repeat(e.stars) : '已取消标星'}`); return;
+  }
+  const ed = t.closest('[data-edit]'); if (ed) { if (location.hash !== '#admin') { location.hash = 'admin'; } openEditor(ed.dataset.edit); return; }
+  const tab = t.closest('[data-tab]'); if (tab) { S.tab = tab.dataset.tab; renderTab(); return; }
+  const sc = t.closest('[data-scope]'); if (sc) { S.scope = sc.dataset.scope; renderTab(); return; }
+  const da = t.closest('[data-delatt]'); if (da) { S.editing.ev.attachments.splice(+da.dataset.delatt, 1); renderAtts(); return; }
+  const dd = t.closest('[data-deldep]'); if (dd) {
+    const chip = dd.closest('.dept-chip'); const i = +dd.dataset.deldep;
+    if (!chip.classList.contains('armed')) { chip.classList.add('armed'); dd.textContent = '删?'; dd.title = '再点一次删除这个部门和它的名单'; setTimeout(() => { if (chip.isConnected) { chip.classList.remove('armed'); dd.textContent = '✕'; } }, 3000); return; }
+    const name = S.priv.departments[i]; S.priv.departments.splice(i, 1);
+    Object.values(S.priv.records).forEach(r => { if (r.names) delete r.names[name]; });
+    markDirty('priv'); renderTab(); toast(`已删除「${name}」`); return;
+  }
+  const a = t.closest('[data-act]'); if (!a) return;
+  const act = a.dataset.act;
+  if (act === 'past-all') { S.pastAll = true; renderPublic(); }
+  else if (act === 'back') { ev.preventDefault(); history.pushState('', '', location.pathname + location.search); route(); }
+  else if (act === 'demo') {
+    S.priv = normPriv(JSON.parse(JSON.stringify(S.demoData))); S.mode = 'demo'; renderAdmin();
+  }
+  else if (act === 'save') {
+    if (S.mode === 'demo') { S.dirtyEv = S.dirtyPriv = false; updateDirty(); toast('演示模式：修改已在本页生效，刷新后会恢复原样', 4200); return; }
+    if (!S.dirtyEv && !S.dirtyPriv) { toast('没有需要保存的修改'); return; }
+    a.disabled = true; a.textContent = '保存中…';
+    try { await ghSave(); toast('已保存。网站大约 1 分钟后更新', 4200); }
+    catch (e) { toast(ghErrText(e, e.what || '仓库'), 6000); if (e.status === 409 || e.status === 422) { a.textContent = '重新载入'; a.dataset.act = 'reload'; a.disabled = false; return; } }
+    a.disabled = false; a.textContent = '保存'; updateDirty();
+  }
+  else if (act === 'reload') {
+    try { await ghConnect(S.gh); renderAdmin(); toast('已载入最新数据'); } catch (e) { toast(ghErrText(e, e.what || '仓库'), 6000); }
+  }
+  else if (act === 'export') exportExcel();
+  else if (act === 'new') openEditor(null);
+  else if (act === 'add-dep') {
+    let n = 1, name = '新部门'; while (S.priv.departments.includes(name)) name = `新部门${++n}`;
+    S.priv.departments.push(name); markDirty('priv'); renderTab();
+    const inp = $(`#dep-${S.priv.departments.length - 1}`); if (inp) { inp.focus(); inp.select(); }
+  }
+  else if (act === 'del-ev') {
+    if (!a.classList.contains('armed')) { a.classList.add('armed'); a.textContent = '再点一次确认删除'; setTimeout(() => { if (a.isConnected) { a.classList.remove('armed'); a.textContent = '删除活动'; } }, 3000); return; }
+    const id = S.editing.ev.id; S.events = S.events.filter(e => e.id !== id); delete S.priv.records[id];
+    markDirty('ev'); markDirty('priv'); closeEditor(); renderTab(); toast('已删除活动 ' + id);
+  }
+});
+
+document.addEventListener('input', ev => {
+  const t = ev.target;
+  if (t.id === 'q') { S.q = t.value.trim(); renderPublic(); return; }
+  if (t.id === 'admQ') { S.admQ = t.value.trim(); const pos = t.selectionStart; renderTab(); const n = $('#admQ'); n.focus(); try { n.setSelectionRange(pos, pos); } catch {} return; }
+  if (t.matches && t.matches('.names-cell textarea, .note-in')) autosize(t);
+  if (t.dataset.names) { const r = rec(t.dataset.names); r.names = r.names || {}; r.names[t.dataset.dept] = t.value; refreshCounts(t.dataset.names); markDirty('priv'); return; }
+  if (t.dataset.note) { rec(t.dataset.note).note = t.value; markDirty('priv'); return; }
+  if (t.dataset.quota) { const e = findEv(t.dataset.quota); const v = t.value.trim(); e.quota = v === '' ? null : Math.max(0, parseInt(v, 10) || 0) || null; e.updatedAt = TODAY; refreshCounts(e.id); markDirty('ev'); return; }
+  if (t.id === 'f-tbd') return;
+});
+document.addEventListener('change', async ev => {
+  const t = ev.target;
+  if (t.dataset.names) { const v = splitNames(t.value).join('、'); if (v !== t.value) { t.value = v; rec(t.dataset.names).names[t.dataset.dept] = v; } return; }
+  if (t.dataset.ind) { const e = findEv(t.dataset.ind); e.industry = t.value; e.updatedAt = TODAY; markDirty('ev'); toast(`「${e.title.slice(0, 18)}」行业改为${t.value}`); return; }
+  if (t.dataset.status) { const e = findEv(t.dataset.status); e.status = t.value; e.updatedAt = TODAY; markDirty('ev'); renderTab(); toast(`「${e.title.slice(0, 18)}」已设为${t.options[t.selectedIndex].text}`); return; }
+  if (t.dataset.dep !== undefined) {
+    const i = +t.dataset.dep; const old = S.priv.departments[i]; const nv = t.value.trim();
+    if (!nv || nv === old) { t.value = old; return; }
+    if (S.priv.departments.includes(nv)) { toast('已经有这个部门了'); t.value = old; return; }
+    S.priv.departments[i] = nv;
+    Object.values(S.priv.records).forEach(r => { if (r.names && old in r.names) { r.names[nv] = r.names[old]; delete r.names[old]; } });
+    markDirty('priv'); renderTab(); return;
+  }
+  if (t.id === 'f-tbd') { $('#f-dates').hidden = t.checked; $('#f-month-wrap').hidden = !t.checked; return; }
+  if (t.id === 'f-file') {
+    const files = [...t.files]; t.value = '';
+    for (const f of files) {
+      if (f.size > 25 * 1024 * 1024) { toast(`${f.name} 超过 25MB，换个小一点的文件`); continue; }
+      if (S.mode === 'github') {
+        toast(`正在上传 ${f.name}…`, 10000);
+        try { S.editing.ev.attachments.push(await ghUpload(S.editing.ev.id, f)); toast(`已上传 ${f.name}`); }
+        catch (e) { toast(ghErrText(e, e.what || '网站仓库'), 6000); }
+      } else { S.editing.ev.attachments.push({ name: f.name, url: URL.createObjectURL(f) }); }
+      renderAtts();
+    }
+  }
+});
+document.addEventListener('submit', ev => { if (ev.target.id === 'evForm') submitEditor(ev); });
+document.addEventListener('keydown', ev => {
+  if (ev.key !== 'Escape') return;
+  if (!$('#drawer').hidden) closeEditor(); else closeSheet();
+});
+
+/* ================= boot ================= */
+async function boot() {
+  route();
+  try {
+    const r = await fetch('data/events.json', { cache: 'no-cache' });
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json();
+    if (!S.mode) { S.events = normEvents(j.events); S.updatedAt = j.updatedAt || ''; }
+    S.loaded = true;
+  } catch {
+    S.loaded = true;
+    $('#openList').innerHTML = '<div class="empty">活动数据没有加载出来，请刷新页面再试。</div>';
+  }
+  route();
+  try {
+    const r = await fetch('demo/enrollment.json', { cache: 'no-cache' });
+    S.demoData = r.ok ? await r.json() : null;
+  } catch { S.demoData = null; }
+  if (location.hash === '#admin' && !S.mode) renderAdmin();
+}
+boot();
+})();
+</script>
+</body>
+</html>
