@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-20",
+ "updatedAt": "2026-10-23",
  "events": [
   {
    "id": "P-2024-VN",
@@ -1725,6 +1725,34 @@
    "attachments": [],
    "link": "",
    "updatedAt": "2026-10-20"
+  },
+  {
+   "id": "E037",
+   "title": "韩国首尔电子产业链调研",
+   "organizer": "招商证券国际",
+   "type": "调研",
+   "industry": "TMT",
+   "stars": 1,
+   "start": "2026-11-17",
+   "end": "2026-11-18",
+   "month": "",
+   "dateNote": "",
+   "location": "韩国 · 首尔",
+   "theme": "韩国半导体与电子产业链：存储、设备、元器件",
+   "companies": "LG Innotek、韩美半导体（待定）、LG电子（待定）、三星电子（待定）、三星电机（待定）、SK海力士（待定）、圆益IPS（待定）、韩华Semitech（待定）、SK电信（待定）、SKC（待定）",
+   "route": "",
+   "notice": "需联系对口销售报名；带队分析师为招商证券电子首席鄢凡；参访公司大部分仍在邀请中，以最终确认为准",
+   "status": "open",
+   "deadline": "2026-10-28",
+   "quota": null,
+   "attachments": [
+    {
+     "name": "活动海报",
+     "path": "files/E037/招商证券国际-韩国首尔电子产业链调研-海报.jpg"
+    }
+   ],
+   "link": "",
+   "updatedAt": "2026-10-23"
   }
  ]
 }
