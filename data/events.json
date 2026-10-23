@@ -1167,12 +1167,12 @@
    "companies": "宝马 BMW（BMW GY）、西门子 Siemens（SIE GY）、西门子能源（ENR GY）、Traton（8TRA GY）、奔驰 Mercedes-Benz（MBG GY，IR 交流加 VIP 博物馆参观）、保时捷 Porsche（P911 GY，CEO 与 CFO 交流及晚餐，参观 911 与 Sonderwunsch 工厂）、赛峰 Safran（SAF FP）、法液空 Air Liquide（AI FP）、施耐德 Schneider Electric（SU FP）、道达尔 TotalEnergies（TTE FP，待定）",
    "route": "11/30–12/1 慕尼黑\n12/1–2 斯图加特\n12/3–4 巴黎",
    "notice": "小范围活动",
-   "status": "open",
+   "status": "closed",
    "deadline": "2026-10-23",
    "quota": null,
    "attachments": [],
    "link": "",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-10-23"
   },
   {
    "id": "E013",
@@ -1190,12 +1190,12 @@
    "companies": "泛太平洋国际控股（7532 JP）、明治控股（2269 JP）、资生堂（4911 JP）、麒麟控股（2503 JP）、三丽鸥（8136 JP）、善商控股（7550 JP）、三越伊势丹（3099 JP）；Zoom：寿司郎（3563 JP）、卡普空（9697 JP）、味之素（2802 JP）",
    "route": "12/3–4 东京线下\n12/10、12/15 Zoom 线上",
    "notice": "",
-   "status": "open",
+   "status": "closed",
    "deadline": "2026-10-23",
    "quota": null,
    "attachments": [],
    "link": "",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-10-23"
   },
   {
    "id": "E014",
@@ -1719,12 +1719,12 @@
    "companies": "银行金融：HDFC Bank、ICICI Bank、State Bank of India；科技：Infosys、Tata Consultancy、HCL Tech；汽车：Maruti Suzuki、Mahindra & Mahindra、Tata Motors；能源公用：ONGC、NTPC、Tata Power；材料工业：Reliance Industries、Larsen & Toubro、Tata Steel；消费零售：Hindustan Unilever、Titan、Asian Paints；医药：Sun Pharma、Dr Reddy's、Cipla；地产：DLF、Godrej Properties 等 118 家（名单更新至 10/12）",
    "route": "11/16–11/18 孟买 · 策略会\n11/19–11/20 会后参访（可选）",
    "notice": "报名截止 10/23（周五）中午 12:00；印度签证材料严格、流程繁琐，请尽早准备；与 UBS 伦敦生物医药大会（E006，11/16–17）时间重叠，与 UBS 欧洲大会（E005，11/10–11）时间邻近，连报前请先确认行程衔接",
-   "status": "open",
+   "status": "closed",
    "deadline": "2026-10-23",
    "quota": null,
    "attachments": [],
    "link": "",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-10-23"
   },
   {
    "id": "E037",
@@ -1732,7 +1732,7 @@
    "organizer": "招商证券国际",
    "type": "调研",
    "industry": "TMT",
-   "stars": 1,
+   "stars": 2,
    "start": "2026-11-17",
    "end": "2026-11-18",
    "month": "",
