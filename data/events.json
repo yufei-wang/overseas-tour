@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23",
+ "updatedAt": "2026-11-02",
  "events": [
   {
    "id": "P-2024-VN",
@@ -1115,18 +1115,18 @@
    "start": "2026-12-07",
    "end": "2026-12-11",
    "month": "",
-   "dateNote": "",
+   "dateNote": "邀请函写 12/6（周日）至 12/11，行程从 12/7 开始",
    "location": "日本 · 东京",
    "theme": "半导体设备与材料：IR 会议加展位参观",
-   "companies": "Shibaura Mechatronics（6590 JP）、Advantest（6857 JP）、Tokyo Electron（8035 JP）、Tokyo Seimitsu（7729 JP）、HOYA（7741 JP）、KOKUSAI ELECTRIC（6525 JP）、JEOL（6951 JP）、Toyo Gosei（4970 JP）、信越化学（4063 JP）、Nitto Boseki（3110 JP）、Mitsubishi Gas Chemical（4182 JP）、Disco（6146 JP）、SCREEN HD（7735 JP）、Kioxia（285A JP）",
+   "companies": "Shibaura Mechatronics（6590 JP）、Advantest（6857 JP）、Tokyo Electron（8035 JP）、Tokyo Seimitsu（7729 JP）、HOYA（7741 JP）、KOKUSAI ELECTRIC（6525 JP）、JEOL（6951 JP）、Toyo Gosei（4970 JP）、信越化学（4063 JP）、Nitto Boseki（3110 JP）、Mitsubishi Gas Chemical（4182 JP）、Disco（6146 JP）、SCREEN HD（7735 JP）、Lasertec（6920 JP）、Rigaku HD（286A JP）、Canon（7751 JP）",
    "route": "12/7–10 公司 IR 会议\n12/10–11 展会展位参观",
-   "notice": "可以只参加部分场次；可提出名单外的拜访需求",
-   "status": "closed",
-   "deadline": null,
+   "notice": "仅限受邀机构，国泰证券保留最终参与席位决定权；机票、酒店自行预订，参考酒店为东京新桥光芒酒店（CANDEO HOTELS Tokyo Shimbashi）；行程尚待各公司确认，会有调整；可以只参加部分场次；可提出名单外的拜访需求",
+   "status": "open",
+   "deadline": "2026-11-02",
    "quota": null,
    "attachments": [],
    "link": "",
-   "updatedAt": "2026-10-20"
+   "updatedAt": "2026-11-02"
   },
   {
    "id": "E011",
