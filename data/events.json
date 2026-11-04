@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-02",
+ "updatedAt": "2026-11-04",
  "events": [
   {
    "id": "P-2024-VN",
@@ -1739,9 +1739,9 @@
    "dateNote": "",
    "location": "韩国 · 首尔",
    "theme": "韩国半导体与电子产业链：存储、设备、元器件",
-   "companies": "LG Innotek、韩美半导体（待定）、LG电子（待定）、三星电子（待定）、三星电机（待定）、SK海力士（待定）、圆益IPS（待定）、韩华Semitech（待定）、SK电信（待定）、SKC（待定）",
-   "route": "",
-   "notice": "需联系对口销售报名；带队分析师为招商证券电子首席鄢凡；参访公司大部分仍在邀请中，以最终确认为准",
+   "companies": "乐天能源材料 Lotte Energy Materials（020150 KS）、SK海力士专家午餐会、LG Innotek（011070 KS）、SK Telecom（017670 KS）、三星电子专家交流、韩华Semitech（000880 KS）、Simmtech（222800 KS，待定）、HPSP（403870 KS，待定）、周星工程 JUSUNG ENGINEERING（036930 KS）",
+   "route": "11/17 首尔：乐天能源材料、海力士专家午餐会、LG Innotek、SK Telecom、三星电子专家\n11/18 首尔周边（京畿道城南、华城、龙仁）：韩华Semitech、Simmtech、HPSP、周星工程",
+   "notice": "需联系对口销售报名；带队分析师为招商证券电子首席鄢凡；Simmtech、HPSP 仍在确认中；第二天要去京畿道城南、华城、龙仁，路程较长；推荐酒店为汝矣岛格莱德酒店（GLAD Yeouido）；推荐航班 11/16 去、11/19 回：深圳 CZ3089 / ZH634，香港 CX418 / CX453",
    "status": "open",
    "deadline": "2026-10-28",
    "quota": null,
@@ -1752,7 +1752,7 @@
     }
    ],
    "link": "",
-   "updatedAt": "2026-10-23"
+   "updatedAt": "2026-11-04"
   }
  ]
 }
