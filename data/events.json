@@ -1742,13 +1742,69 @@
    "companies": "乐天能源材料 Lotte Energy Materials（020150 KS）、SK海力士专家午餐会、LG Innotek（011070 KS）、SK Telecom（017670 KS）、三星电子专家交流、韩华Semitech（000880 KS）、Simmtech（222800 KS，待定）、HPSP（403870 KS，待定）、周星工程 JUSUNG ENGINEERING（036930 KS）",
    "route": "11/17 首尔：乐天能源材料、海力士专家午餐会、LG Innotek、SK Telecom、三星电子专家\n11/18 首尔周边（京畿道城南、华城、龙仁）：韩华Semitech、Simmtech、HPSP、周星工程",
    "notice": "需联系对口销售报名；带队分析师为招商证券电子首席鄢凡；Simmtech、HPSP 仍在确认中；第二天要去京畿道城南、华城、龙仁，路程较长；推荐酒店为汝矣岛格莱德酒店（GLAD Yeouido）；推荐航班 11/16 去、11/19 回：深圳 CZ3089 / ZH634，香港 CX418 / CX453",
-   "status": "open",
+   "status": "closed",
    "deadline": "2026-10-28",
    "quota": null,
    "attachments": [
     {
      "name": "活动海报",
      "path": "files/E037/招商证券国际-韩国首尔电子产业链调研-海报.jpg"
+    }
+   ],
+   "link": "",
+   "updatedAt": "2026-11-04"
+  },
+  {
+   "id": "E038",
+   "title": "欧洲金融行业调研",
+   "organizer": "中信建投证券",
+   "type": "调研",
+   "industry": "周期",
+   "stars": 1,
+   "start": null,
+   "end": null,
+   "month": "2027-07",
+   "dateNote": "2027年三季度（待定）",
+   "location": "英国 / 西班牙 / 德国 / 瑞士 · 伦敦 / 马德里 / 法兰克福 / 苏黎世",
+   "theme": "欧洲大行转型、财富管理与跨境金融",
+   "companies": "汇丰控股、渣打集团、Wise、劳埃德银行、NatWest、桑坦德银行、BBVA、德意志银行、瑞银集团",
+   "route": "Day 1 伦敦：汇丰、渣打、Wise\nDay 2 伦敦：劳埃德、NatWest\nDay 3 马德里：桑坦德、BBVA\nDay 4 法兰克福：德意志银行\nDay 5 苏黎世：瑞银",
+   "notice": "行程为拟定，以实际安排为准；汇丰、渣打安排高管及业务部门交流，其余为 IR 交流",
+   "status": "open",
+   "deadline": null,
+   "quota": null,
+   "attachments": [
+    {
+     "name": "邀请函及日程",
+     "path": "files/E038/中信建投-欧洲金融行业调研-邀请函.pdf"
+    }
+   ],
+   "link": "",
+   "updatedAt": "2026-11-04"
+  },
+  {
+   "id": "E039",
+   "title": "美国金融行业调研",
+   "organizer": "中信建投证券",
+   "type": "调研",
+   "industry": "周期",
+   "stars": 1,
+   "start": null,
+   "end": null,
+   "month": "2027-04",
+   "dateNote": "2027年二季度（待定）",
+   "location": "美国 · 纽约 / 波士顿 / 达拉斯",
+   "theme": "美国大行、资管、另类投资与互联网券商",
+   "companies": "摩根大通、花旗、阿波罗、黑石、贝莱德、高盛、摩根士丹利、美国运通、万事达、Robinhood、嘉信理财",
+   "route": "Day 1–3 纽约：摩根大通、花旗、阿波罗、黑石、贝莱德、高盛、摩根士丹利、运通、万事达\nDay 4 波士顿：Robinhood\nDay 5 达拉斯：嘉信理财",
+   "notice": "行程为拟定，以实际安排为准；均为 IR 团队交流",
+   "status": "open",
+   "deadline": null,
+   "quota": null,
+   "attachments": [
+    {
+     "name": "邀请函及日程",
+     "path": "files/E039/中信建投-美国金融行业调研-邀请函.pdf"
     }
    ],
    "link": "",
